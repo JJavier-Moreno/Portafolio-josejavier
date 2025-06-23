@@ -19,7 +19,7 @@ const Sobremi = () => {
   const transition = { duration: 0.4, ease: "easeOut" };
 
   return (
-    <section className="relative flex flex-col items-center">
+    <section className="relative flex flex-col items-center" id="sobre-mi">
       <h2 className="font-bold text-white lg:text-3xl"> Sobre mi</h2>
 
       <div className="mt-4">
