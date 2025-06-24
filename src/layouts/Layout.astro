@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import Header from "../components/Header.astro";
+import Header from "../components/Header.jsx";
 import Sobremi from "../components/Sobremi.jsx";
 import RotatingText from "../components/RotatingText";
 const { title } = Astro.props;
@@ -18,7 +18,7 @@ const { title } = Astro.props;
     />
   </head>
   <body class="font-sans bg-black-900">
-    <Header />
+    <Header client:load/>
     <main class="relative min-h-screen">
       <div class="relative mt-16">
         <div
