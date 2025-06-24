@@ -5,7 +5,7 @@ const Sobremi = () => {
   const [seccion, setSeccion] = useState("historia");
 
   const classButton = (key) =>
-    `px-6 py-2 text-sm border  rounded-2xl transition-all duration-500 ${
+    `px-3 py-2 md:px-6 md:py-2 text-md border rounded-xl md:rounded-2xl transition-all duration-500 ${
       seccion === key
         ? "text-gray-200  border-gray-300 shadow-md shadow-gray-400/20"
         : "text-gray-400  border-gray-700 "
@@ -20,10 +20,10 @@ const Sobremi = () => {
 
   return (
     <section className="relative flex flex-col items-center" id="sobre-mi">
-      <h2 className="font-bold text-white lg:text-3xl"> Sobre mi</h2>
+      <h2 className="text-3xl font-bold text-white lg:text-3xl"> Sobre mi</h2>
 
       <div className="mt-4">
-        <div className="flex gap-6">
+        <div className="flex gap-3 md:gap-6">
           <button
             onClick={() => setSeccion("historia")}
             className={classButton("historia")}
@@ -52,13 +52,13 @@ const Sobremi = () => {
           animate="visible"
           variants={variants}
           transition={transition}
-          className="w-full px-40 mt-10"
+          className="w-full mt-10 md:mt-10 md:px-20 lg:px-40"
         >
-          <div className="w-full px-20">
-            <h3 className="text-xl font-semibold text-green-500">
+          <div className="w-full px-4 md:px-10 lg:px-20">
+            <h3 className="text-xl font-semibold text-green-500 md:text-xl">
               Mi historia
             </h3>
-            <p className="mt-4 text-white">
+            <p className="mt-4 text-white text-md md:text-xl">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
               dignissimos recusandae iusto laudantium dolor tenetur quos dolorum
               praesentium ipsum! Esse at adipisci aspernatur voluptate ullam
@@ -75,19 +75,19 @@ const Sobremi = () => {
           animate="visible"
           variants={variants}
           transition={transition}
-          className="w-full px-40 mt-10"
+          className="w-full mt-10 md:mt-10 md:px-40"
         >
-          <div className="w-full px-20">
-            <h3 className="text-xl font-semibold text-green-500">
+          <div className="w-full md:px-20">
+            <h3 className="text-xl font-semibold text-center text-green-500 md:text-left md:text-xl">
               Estudios Cursados
             </h3>
-            <div className="grid w-full grid-cols-2 gap-2 p-6 mt-5 transition-all duration-500 ease-in-out rounded-lg hover:scale-105 hover:bg-black-800">
-              <div className="flex text-gray-200 align-top w-max">
-                <p className="">2023 - Actualmente</p>
+            <div className="grid mt-4 transition-all duration-500 ease-in-out rounded-lg w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 hover:scale-105 hover:bg-black-800">
+              <div className="flex text-gray-400 align-top md:text-gray-200 w-max">
+                <p className="md:text-md">2023 - Actualmente</p>
               </div>
               <div>
                 <div>
-                  <h4 className="text-xl text-gray-50">
+                  <h4 className="text-xl md:text-xl text-gray-50">
                     Master Desarrollo FullStack
                   </h4>
                   <p className="text-gray-500 text-md">
@@ -96,13 +96,13 @@ const Sobremi = () => {
                 </div>
               </div>
             </div>
-            <div className="grid w-full grid-cols-2 gap-2 p-6 mt-3 transition-all duration-500 ease-in-out rounded-lg hover:scale-105 hover:bg-black-800">
-              <div className="flex text-gray-200 align-top w-max">
-                <p className="">2018 - 2023</p>
+            <div className="grid mt-4 transition-all duration-500 ease-in-out rounded-lg w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
+              <div className="flex text-gray-400 align-top md:text-gray-200 w-max">
+                <p className="md:text-md">2018 - 2023</p>
               </div>
               <div>
                 <div>
-                  <h4 className="text-xl text-gray-50">
+                  <h4 className="text-xl md:text-xl text-gray-50">
                     Grado en Ingeniería Informática
                   </h4>
                   <p className="text-gray-500 text-md">
@@ -112,12 +112,12 @@ const Sobremi = () => {
               </div>
             </div>
             <div className="mt-5">
-              <h5 className="text-xl font-semibold text-center text-green-600">
+              <h5 className="text-lg font-semibold text-center text-green-500 md:text-left md:text-xl">
                 Otros estudios
               </h5>
-              <div className="grid grid-cols-3 gap-5 mt-1">
-                <div className="px-6 py-3 mt-3 transition-all duration-500 ease-in-out rounded-lg hover:scale-105 hover:bg-black-800">
-                  <p className="flex items-center text-md text-gray-50">
+              <div className="grid mt-4 md:mt-4 md:gap-5 md:grid-cols-3">
+                <div className="flex flex-col transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
+                  <p className="flex items-center text-xl text-gray-50">
                     Curso de Javascript{" "}
                     <span className="ml-2">
                       {" "}
@@ -134,10 +134,10 @@ const Sobremi = () => {
                       </svg>
                     </span>
                   </p>
-                  <p className="text-gray-500 text-md">2023 - Udemy</p>
+                  <p className="text-gray-500 text-md md:text-md">2023 - Udemy</p>
                 </div>
-                <div className="px-6 py-3 mt-3 transition-all duration-500 ease-in-out rounded-lg hover:scale-105 hover:bg-black-800">
-                  <p className="flex items-center text-md text-gray-50">
+                <div className="mt-3 transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
+                  <p className="flex items-center text-xl text-gray-50">
                     Curso de React{" "}
                     <span className="ml-2">
                       <svg
@@ -153,9 +153,9 @@ const Sobremi = () => {
                       </svg>
                     </span>
                   </p>
-                  <p className="text-gray-500 text-md">2023 - Udemy</p>
+                  <p className="text-gray-500 text-md md:text-md">2023 - Udemy</p>
                 </div>
-                <div className="px-6 py-3 mt-3 transition-all duration-500 ease-in-out rounded-lg hover:scale-105 hover:bg-black-800">
+                <div className="mt-3 transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
                   <p className="flex items-center text-md text-gray-50">
                     Curso de Node js
                     <span className="ml-2">
@@ -172,7 +172,7 @@ const Sobremi = () => {
                       </svg>
                     </span>
                   </p>
-                  <p className="text-gray-500 text-md">2023 - Udemy</p>
+                  <p className="text-gray-500 text-md md:text-md">2023 - Udemy</p>
                 </div>
               </div>
             </div>
@@ -187,39 +187,39 @@ const Sobremi = () => {
           animate="visible"
           variants={variants}
           transition={transition}
-          className="w-full px-40 mt-10"
+          className="w-full mt-10 md:mt-10 md:px-40"
         >
-          <div className="w-full px-20">
-            <h3 className="w-full mb-5 text-xl font-semibold text-left text-green-500">
+          <div className="w-full md:px-20">
+            <h3 className="text-xl font-semibold text-center text-green-500 md:text-left md:text-xl">
               Experiencia Laboral
             </h3>
-            <div className="grid w-full grid-cols-2 gap-2 p-6 mt-2 transition-all duration-500 ease-in-out rounded-lg hover:scale-105 hover:bg-black-800">
-              <p className="flex text-gray-200 align-top w-max">
+            <div className="grid gap-1 mt-4 transition-all duration-500 ease-in-out rounded-lg md:gap-0 w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
+              <p className="flex text-gray-400 align-top text-md md:text-md md:text-gray-200 w-max">
                 2025 - Actualmente
               </p>
               <div>
-                <h4 className="text-xl text-gray-50">Desarrollador Software</h4>
-                <p className="mt-1 text-gray-400 text-md">
+                <h4 className="text-xl md:text-xl text-gray-50">Desarrollador Software</h4>
+                <p className="mt-1 text-gray-400 text-md md:text-md">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Beatae impedit veritatis, nobis officia deleniti blanditiis
                   culpa cum error molestiae aliquam accusamus aut a odio
                   pariatur in sequi cupiditate. Perspiciatis, error.
                 </p>
                 <div>
-                  <div className="flex flex-wrap gap-2 mt-3">
-                    <p className="px-3 py-1 text-sm font-semibold text-green-300 border border-gray-700 rounded-2xl">
+                  <div className="flex flex-wrap gap-1 mt-3 md:gap-2">
+                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
                       HTML
                     </p>
-                    <p className="px-3 py-1 text-sm font-semibold text-green-300 border border-gray-700 rounded-2xl">
+                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
                       CSS
                     </p>
-                    <p className="px-3 py-1 text-sm font-semibold text-green-300 border border-gray-700 rounded-2xl">
+                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
                       Javascript
                     </p>
-                    <p className="px-3 py-1 text-sm font-semibold text-green-300 border border-gray-700 rounded-2xl">
+                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
                       PHP
                     </p>
-                    <p className="px-3 py-1 text-sm font-semibold text-green-300 border border-gray-700 rounded-2xl">
+                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
                       MySQL
                     </p>
                   </div>
@@ -227,33 +227,33 @@ const Sobremi = () => {
               </div>
             </div>
 
-            <div className="grid w-full grid-cols-2 gap-2 p-6 mt-5 transition-all duration-500 ease-in-out rounded-lg hover:scale-105 hover:bg-black-800">
-              <p className="flex text-gray-200 align-top w-max">2023 - 2025</p>
+            <div className="grid gap-1 mt-10 transition-all duration-500 ease-in-out rounded-lg md:gap-0 w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
+              <p className="flex text-gray-400 align-top text-md md:text-md md:text-gray-200 w-max">2023 - 2025</p>
               <div>
-                <h4 className="text-xl text-gray-50">
+                <h4 className="text-xl md:text-xl text-gray-50">
                   Desarrollador de Diagnosis
                 </h4>
-                <p className="mt-1 text-gray-400 text-md">
+                <p className="mt-1 text-gray-400 text-md md:text-md">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Beatae impedit veritatis, nobis officia deleniti blanditiis
                   culpa cum error molestiae aliquam accusamus aut a odio
                   pariatur in sequi cupiditate. Perspiciatis, error.
                 </p>
                 <div>
-                  <div className="flex flex-wrap gap-2 mt-3">
-                    <p className="px-3 py-1 text-sm font-semibold text-green-300 border border-gray-700 rounded-2xl">
+                  <div className="flex flex-wrap gap-1 mt-3 md:gap-2">
+                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
                       C++
                     </p>
-                    <p className="px-3 py-1 text-sm font-semibold text-green-300 border border-gray-700 rounded-2xl">
+                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
                       Protocolos comunicación Vehiculos
                     </p>
-                    <p className="px-3 py-1 text-sm font-semibold text-green-300 border border-gray-700 rounded-2xl">
+                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
                       Análisis de tramas
                     </p>
-                    <p className="px-3 py-1 text-sm font-semibold text-green-300 border border-gray-700 rounded-2xl">
+                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
                       Testing
                     </p>
-                    <p className="px-3 py-1 text-sm font-semibold text-green-300 border border-gray-700 rounded-2xl">
+                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
                       Plastic SCM
                     </p>
                   </div>
@@ -261,33 +261,33 @@ const Sobremi = () => {
               </div>
             </div>
 
-            <div className="grid w-full grid-cols-2 gap-2 p-6 mt-5 transition-all duration-500 ease-in-out rounded-lg hover:scale-105 hover:bg-black-800">
-              <p className="flex text-gray-200 align-top w-max">2022 - 2023</p>
+            <div className="grid gap-1 mt-10 transition-all duration-500 ease-in-out rounded-lg md:gap-0 w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
+              <p className="flex text-gray-400 align-top text-md md:text-md md:text-gray-200 w-max">2022 - 2023</p>
               <div>
-                <h4 className="text-xl text-gray-50">
+                <h4 className="text-xl md:text-xl text-gray-50">
                   Desarrollador Fullstack (Practicas)
                 </h4>
-                <p className="mt-1 text-gray-400 text-md">
+                <p className="mt-1 text-gray-400 text-md md:text-md">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Beatae impedit veritatis, nobis officia deleniti blanditiis
                   culpa cum error molestiae aliquam accusamus aut a odio
                   pariatur in sequi cupiditate. Perspiciatis, error.
                 </p>
                 <div>
-                  <div className="flex flex-wrap gap-2 mt-3">
-                    <p className="px-3 py-1 text-sm font-semibold text-green-300 border border-gray-700 rounded-2xl">
+                  <div className="flex flex-wrap gap-1 mt-3 md:gap-2">
+                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
                       HTML
                     </p>
-                    <p className="px-3 py-1 text-sm font-semibold text-green-300 border border-gray-700 rounded-2xl">
+                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
                       CSS
                     </p>
-                    <p className="px-3 py-1 text-sm font-semibold text-green-300 border border-gray-700 rounded-2xl">
+                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
                       Javascript
                     </p>
-                    <p className="px-3 py-1 text-sm font-semibold text-green-300 border border-gray-700 rounded-2xl">
+                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
                       React
                     </p>
-                    <p className="px-3 py-1 text-sm font-semibold text-green-300 border border-gray-700 rounded-2xl">
+                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
                       Node
                     </p>
                   </div>
