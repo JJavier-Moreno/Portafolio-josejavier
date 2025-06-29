@@ -21,8 +21,10 @@ const Sobremi = () => {
   return (
     <section className="relative flex flex-col items-center" id="sobre-mi">
       <h2 className="text-3xl font-bold text-white lg:text-3xl"> Sobre mi</h2>
+      <p className="mt-2 text-gray-400">Conoce un poco más sobre mi trayectoria personal, educativa y profesional</p>
+      
 
-      <div className="mt-4">
+      <div className="mt-10">
         <div className="flex gap-3 md:gap-6">
           <button
             onClick={() => setSeccion("historia")}
@@ -58,11 +60,13 @@ const Sobremi = () => {
             <h3 className="text-xl font-semibold text-green-500 md:text-xl">
               Mi historia
             </h3>
-            <p className="mt-4 text-white text-md md:text-xl">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
-              dignissimos recusandae iusto laudantium dolor tenetur quos dolorum
-              praesentium ipsum! Esse at adipisci aspernatur voluptate ullam
-              dolorem consequatur, blanditiis fugit quam.
+            <p className="mt-4 text-white text-md md:text-lg">
+            Desde pequeño siempre fui un apasionado por la tecnología, es por ello que, cuando crecí, decidí graduarme en Ingenería Informática. 
+            Durante la carrera fui capaz de desarrollar habilidades como: 
+            Aunque no fue hasta el último curso, donde comencé con la asignatura "Tecnologías y Diseño web", cuando me dí cuenta de lo que realmente me apasionaba.
+            En esta asignatura, aprendi lenguajes web como HTML, CSS y JavaScript.
+            Al ser muy creativo, aprendiendo estas tecnologías sentía que podía crear cualquier cosa que se me ocurriera.
+            <br />
             </p>
           </div>
         </motion.section>
