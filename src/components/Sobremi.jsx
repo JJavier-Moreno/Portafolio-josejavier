@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import ScrollFloat from "./ScrollFloat";
 
 const Sobremi = () => {
   const [seccion, setSeccion] = useState("historia");
@@ -20,9 +21,12 @@ const Sobremi = () => {
 
   return (
     <section className="relative flex flex-col items-center" id="sobre-mi">
-      <h2 className="text-3xl font-bold text-white lg:text-3xl"> Sobre mi</h2>
-      <p className="mt-2 text-gray-400">Conoce un poco más sobre mi trayectoria personal, educativa y profesional</p>
-      
+      <ScrollFloat text="Sobre mi" />
+      {/* <h2 className="text-3xl font-bold text-white lg:text-5xl"> Sobre mi</h2> */}
+      <p className="mt-6 text-gray-400 text-md">
+        Conoce un poco más sobre mi trayectoria personal, educativa y
+        profesional
+      </p>
 
       <div className="mt-10">
         <div className="flex gap-3 md:gap-6">
@@ -54,19 +58,23 @@ const Sobremi = () => {
           animate="visible"
           variants={variants}
           transition={transition}
-          className="w-full mt-10 md:mt-10 md:px-20 lg:px-40"
+          className="w-full mt-10 md:mt-10 lg:px-20 xl:px-40"
         >
-          <div className="w-full px-4 md:px-10 lg:px-20">
+          <div className="w-full px-4 md:px-0 xl:px-20">
             <h3 className="text-xl font-semibold text-green-500 md:text-xl">
               Mi historia
             </h3>
             <p className="mt-4 text-white text-md md:text-lg">
-            Desde pequeño siempre fui un apasionado por la tecnología, es por ello que, cuando crecí, decidí graduarme en Ingenería Informática. 
-            Durante la carrera fui capaz de desarrollar habilidades como: 
-            Aunque no fue hasta el último curso, donde comencé con la asignatura "Tecnologías y Diseño web", cuando me dí cuenta de lo que realmente me apasionaba.
-            En esta asignatura, aprendi lenguajes web como HTML, CSS y JavaScript.
-            Al ser muy creativo, aprendiendo estas tecnologías sentía que podía crear cualquier cosa que se me ocurriera.
-            <br />
+              Desde pequeño siempre fui un apasionado por la tecnología, es por
+              ello que, cuando crecí, decidí graduarme en Ingenería Informática.
+              Durante la carrera fui capaz de desarrollar habilidades como:
+              Aunque no fue hasta el último curso, donde comencé con la
+              asignatura "Tecnologías y Diseño web", cuando me dí cuenta de lo
+              que realmente me apasionaba. En esta asignatura, aprendi lenguajes
+              web como HTML, CSS y JavaScript. Al ser muy creativo, aprendiendo
+              estas tecnologías sentía que podía crear cualquier cosa que se me
+              ocurriera.
+              <br />
             </p>
           </div>
         </motion.section>
@@ -79,9 +87,9 @@ const Sobremi = () => {
           animate="visible"
           variants={variants}
           transition={transition}
-          className="w-full mt-10 md:mt-10 md:px-40"
+          className="w-full mt-10 md:mt-10 lg:px-20 xl:px-40"
         >
-          <div className="w-full md:px-20">
+          <div className="w-full xl:px-20">
             <h3 className="text-xl font-semibold text-center text-green-500 md:text-left md:text-xl">
               Estudios Cursados
             </h3>
@@ -138,7 +146,9 @@ const Sobremi = () => {
                       </svg>
                     </span>
                   </p>
-                  <p className="text-gray-500 text-md md:text-md">2023 - Udemy</p>
+                  <p className="text-gray-500 text-md md:text-md">
+                    2023 - Udemy
+                  </p>
                 </div>
                 <div className="mt-3 transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
                   <p className="flex items-center text-xl text-gray-50">
@@ -157,7 +167,9 @@ const Sobremi = () => {
                       </svg>
                     </span>
                   </p>
-                  <p className="text-gray-500 text-md md:text-md">2023 - Udemy</p>
+                  <p className="text-gray-500 text-md md:text-md">
+                    2023 - Udemy
+                  </p>
                 </div>
                 <div className="mt-3 transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
                   <p className="flex items-center text-md text-gray-50">
@@ -176,7 +188,9 @@ const Sobremi = () => {
                       </svg>
                     </span>
                   </p>
-                  <p className="text-gray-500 text-md md:text-md">2023 - Udemy</p>
+                  <p className="text-gray-500 text-md md:text-md">
+                    2023 - Udemy
+                  </p>
                 </div>
               </div>
             </div>
@@ -191,9 +205,9 @@ const Sobremi = () => {
           animate="visible"
           variants={variants}
           transition={transition}
-          className="w-full mt-10 md:mt-10 md:px-40"
+          className="w-full mt-10 md:mt-10 lg:px-20 xl:px-40"
         >
-          <div className="w-full md:px-20">
+          <div className="w-full xl:px-20">
             <h3 className="text-xl font-semibold text-center text-green-500 md:text-left md:text-xl">
               Experiencia Laboral
             </h3>
@@ -202,7 +216,9 @@ const Sobremi = () => {
                 2025 - Actualmente
               </p>
               <div>
-                <h4 className="text-xl md:text-xl text-gray-50">Desarrollador Software</h4>
+                <h4 className="text-xl md:text-xl text-gray-50">
+                  Desarrollador Software
+                </h4>
                 <p className="mt-1 text-gray-400 text-md md:text-md">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Beatae impedit veritatis, nobis officia deleniti blanditiis
@@ -232,7 +248,9 @@ const Sobremi = () => {
             </div>
 
             <div className="grid gap-1 mt-10 transition-all duration-500 ease-in-out rounded-lg md:gap-0 w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
-              <p className="flex text-gray-400 align-top text-md md:text-md md:text-gray-200 w-max">2023 - 2025</p>
+              <p className="flex text-gray-400 align-top text-md md:text-md md:text-gray-200 w-max">
+                2023 - 2025
+              </p>
               <div>
                 <h4 className="text-xl md:text-xl text-gray-50">
                   Desarrollador de Diagnosis
@@ -266,7 +284,9 @@ const Sobremi = () => {
             </div>
 
             <div className="grid gap-1 mt-10 transition-all duration-500 ease-in-out rounded-lg md:gap-0 w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
-              <p className="flex text-gray-400 align-top text-md md:text-md md:text-gray-200 w-max">2022 - 2023</p>
+              <p className="flex text-gray-400 align-top text-md md:text-md md:text-gray-200 w-max">
+                2022 - 2023
+              </p>
               <div>
                 <h4 className="text-xl md:text-xl text-gray-50">
                   Desarrollador Fullstack (Practicas)
