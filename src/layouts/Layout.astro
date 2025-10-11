@@ -6,6 +6,7 @@ import ChatBot from "../components/Chatbot.jsx";
 import RotatingText from "../components/RotatingText";
 import ScrollFloat from "../components/ScrollFloat.jsx";
 import Tecnologias from "../components/Tecnologias.jsx";
+import { LiquidEther } from "reactbits";
 const { title } = Astro.props;
 ---
 
@@ -23,7 +24,22 @@ const { title } = Astro.props;
   <body class="font-sans bg-black-900">
     <Header client:load />
     <main class="relative min-h-screen" id="inicio">
-      <div class="relative mt-14 md:mt-16">
+      <section class="relative mt-14 md:mt-16">
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+          <LiquidEther
+            client:load
+            className="absolute inset-0 pointer-events-none"
+            colors={["#2aff95", "#0a241c", "#020409"]}
+            mouseForce={28}
+            speed={0.6}
+            resolution={0.9}
+            backgroundColor="#020617"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/90 backdrop-blur-[2px] pointer-events-none"
+            aria-hidden="true"
+          ></div>
+        </div>
         <div
           class="container relative px-6 py-12 mx-auto md:py-20 lg:px-16 xl:px-20"
         >
@@ -121,17 +137,18 @@ const { title } = Astro.props;
             </div>
           </div>
         </div>
+      </section>
 
-        <div
-          class="container relative px-7 py-12 mx-auto md:py-20 md:px-14 lg:px-16 xl:px-20"
-        >
-          <Sobremi client:load />
-        </div>
+      <div
+        class="container relative px-7 py-12 mx-auto md:py-20 md:px-14 lg:px-16 xl:px-20"
+      >
+        <Sobremi client:load />
+      </div>
 
-        <div
-          class="container relative px-7 py-12 mx-auto md:py-20 md:px-14 lg:py-24 lg:px-20 xl:px-20"
-        >
-          <section class="relative flex flex-col items-center" id="proyectos">
+      <div
+        class="container relative px-7 py-12 mx-auto md:py-20 md:px-14 lg:py-24 lg:px-20 xl:px-20"
+      >
+        <section class="relative flex flex-col items-center" id="proyectos">
 
             <ScrollFloat client:load text="Proyectos"></ScrollFloat>
 
