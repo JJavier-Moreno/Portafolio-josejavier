@@ -6,7 +6,7 @@ const Sobremi = () => {
   const [seccion, setSeccion] = useState("historia");
 
   const classButton = (key) =>
-    `px-3 py-2 text-sm md:px-5 md:py-2 md:text-base border rounded-xl md:rounded-2xl transition-all duration-500 ${
+    `px-3 py-2 text-sm md:px-5 md:py-2 md:text-base lg:px-6 lg:py-3 lg:text-lg border rounded-xl md:rounded-2xl transition-all duration-500 ${
       seccion === key
         ? "text-gray-200  border-gray-300 shadow-md shadow-gray-400/20"
         : "text-gray-400  border-gray-700 "
@@ -20,16 +20,16 @@ const Sobremi = () => {
   const transition = { duration: 0.4, ease: "easeOut" };
 
   return (
-    <section className="relative flex flex-col items-center" id="sobre-mi">
+    <section className="relative flex flex-col items-center w-full max-w-5xl px-2 mx-auto" id="sobre-mi">
       <ScrollFloat text="Sobre mi" />
       {/* <h2 className="text-3xl font-bold text-white lg:text-5xl"> Sobre mi</h2> */}
-      <p className="mt-6 text-base leading-relaxed text-gray-300 md:text-lg">
+      <p className="mt-6 text-lg leading-relaxed text-center text-gray-300 sm:text-xl md:text-[1.375rem] md:max-w-3xl">
         Conoce un poco más sobre mi trayectoria personal, educativa y
         profesional
       </p>
 
       <div className="mt-10">
-        <div className="flex gap-3 md:gap-6">
+        <div className="flex flex-wrap justify-center gap-3 md:gap-6">
           <button
             onClick={() => setSeccion("historia")}
             className={classButton("historia")}
@@ -58,13 +58,13 @@ const Sobremi = () => {
           animate="visible"
           variants={variants}
           transition={transition}
-          className="w-full mt-10 md:mt-10 lg:px-20 xl:px-40"
+          className="w-full mt-10 md:mt-12 lg:px-16 xl:px-24"
         >
-          <div className="w-full px-4 md:px-0 xl:px-20">
-            <h3 className="text-2xl font-semibold text-green-500 md:text-3xl">
+          <div className="w-full px-4 md:px-6 xl:px-20">
+            <h3 className="text-2xl font-semibold text-green-500 md:text-3xl lg:text-4xl">
               Mi historia
             </h3>
-            <p className="mt-4 text-base leading-relaxed text-white md:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-white md:text-lg lg:text-xl">
               Desde pequeño siempre fui un apasionado por la tecnología, es por
               ello que, cuando crecí, decidí graduarme en Ingenería Informática.
               Durante la carrera fui capaz de desarrollar habilidades como:
@@ -87,49 +87,49 @@ const Sobremi = () => {
           animate="visible"
           variants={variants}
           transition={transition}
-          className="w-full mt-10 md:mt-10 lg:px-20 xl:px-40"
+          className="w-full mt-10 md:mt-12 lg:px-16 xl:px-24"
         >
           <div className="w-full xl:px-20">
-            <h3 className="text-2xl font-semibold text-center text-green-500 md:text-left md:text-3xl">
+            <h3 className="text-2xl font-semibold text-center text-green-500 md:text-left md:text-3xl lg:text-4xl">
               Estudios Cursados
             </h3>
-            <div className="grid mt-4 transition-all duration-500 ease-in-out rounded-lg w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 hover:scale-105 hover:bg-black-800">
+            <div className="grid mt-5 transition-all duration-500 ease-in-out rounded-lg md:grid-cols-2 md:mt-6 md:p-6 lg:p-8 hover:scale-105 hover:bg-black-800">
               <div className="flex text-gray-400 align-top md:text-gray-200 w-max">
-                <p className="text-sm md:text-base">2023 - Actualmente</p>
+                <p className="text-sm md:text-base lg:text-lg">2023 - Actualmente</p>
               </div>
               <div>
                 <div>
-                  <h4 className="text-xl text-gray-50 md:text-2xl">
+                  <h4 className="text-xl text-gray-50 md:text-2xl lg:text-3xl">
                     Master Desarrollo FullStack
                   </h4>
-                  <p className="text-sm text-gray-400 md:text-base">
+                  <p className="text-sm text-gray-400 md:text-base lg:text-lg">
                     Conquer Blocks - Online
                   </p>
                 </div>
               </div>
             </div>
-            <div className="grid mt-4 transition-all duration-500 ease-in-out rounded-lg w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
+            <div className="grid mt-4 transition-all duration-500 ease-in-out rounded-lg md:grid-cols-2 md:mt-6 md:p-6 lg:p-8 md:hover:scale-105 md:hover:bg-black-800">
               <div className="flex text-gray-400 align-top md:text-gray-200 w-max">
-                <p className="text-sm md:text-base">2018 - 2023</p>
+                <p className="text-sm md:text-base lg:text-lg">2018 - 2023</p>
               </div>
               <div>
                 <div>
-                  <h4 className="text-xl text-gray-50 md:text-2xl">
+                  <h4 className="text-xl text-gray-50 md:text-2xl lg:text-3xl">
                     Grado en Ingeniería Informática
                   </h4>
-                  <p className="text-sm text-gray-400 md:text-base">
+                  <p className="text-sm text-gray-400 md:text-base lg:text-lg">
                     Universidad de Castilla La-Mancha - Albacete
                   </p>
                 </div>
               </div>
             </div>
             <div className="mt-6">
-              <h5 className="text-xl font-semibold text-center text-green-500 md:text-left md:text-2xl">
+              <h5 className="text-xl font-semibold text-center text-green-500 md:text-left md:text-2xl lg:text-3xl">
                 Otros estudios
               </h5>
-              <div className="grid mt-4 md:mt-4 md:gap-5 md:grid-cols-3">
-                <div className="flex flex-col transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
-                  <p className="flex items-center text-lg text-gray-50 md:text-xl">
+              <div className="grid mt-5 gap-4 md:gap-6 md:grid-cols-3">
+                <div className="flex flex-col transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-4 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
+                  <p className="flex items-center text-lg text-gray-50 md:text-xl lg:text-2xl">
                     Curso de Javascript{" "}
                     <span className="ml-2">
                       {" "}
@@ -146,12 +146,12 @@ const Sobremi = () => {
                       </svg>
                     </span>
                   </p>
-                  <p className="text-sm text-gray-400 md:text-base">
+                  <p className="text-sm text-gray-400 md:text-base lg:text-lg">
                     2023 - Udemy
                   </p>
                 </div>
-                <div className="mt-3 transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
-                  <p className="flex items-center text-lg text-gray-50 md:text-xl">
+                <div className="mt-3 transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-4 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
+                  <p className="flex items-center text-lg text-gray-50 md:text-xl lg:text-2xl">
                     Curso de React{" "}
                     <span className="ml-2">
                       <svg
@@ -167,12 +167,12 @@ const Sobremi = () => {
                       </svg>
                     </span>
                   </p>
-                  <p className="text-sm text-gray-400 md:text-base">
+                  <p className="text-sm text-gray-400 md:text-base lg:text-lg">
                     2023 - Udemy
                   </p>
                 </div>
-                <div className="mt-3 transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
-                  <p className="flex items-center text-lg text-gray-50 md:text-xl">
+                <div className="mt-3 transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-4 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
+                  <p className="flex items-center text-lg text-gray-50 md:text-xl lg:text-2xl">
                     Curso de Node js
                     <span className="ml-2">
                       <svg
@@ -188,7 +188,7 @@ const Sobremi = () => {
                       </svg>
                     </span>
                   </p>
-                  <p className="text-sm text-gray-400 md:text-base">
+                  <p className="text-sm text-gray-400 md:text-base lg:text-lg">
                     2023 - Udemy
                   </p>
                 </div>
@@ -205,22 +205,22 @@ const Sobremi = () => {
           animate="visible"
           variants={variants}
           transition={transition}
-          className="w-full mt-10 md:mt-10 lg:px-20 xl:px-40"
+          className="w-full mt-10 md:mt-12 lg:px-16 xl:px-24"
         >
           <div className="w-full xl:px-20">
-            <h3 className="text-2xl font-semibold text-center text-green-500 md:text-left md:text-3xl">
+            <h3 className="text-2xl font-semibold text-center text-green-500 md:text-left md:text-3xl lg:text-4xl">
               Experiencia Laboral
             </h3>
             <div className="mt-6 space-y-10">
-              <div className="grid items-start gap-6 transition-all duration-500 rounded-lg md:grid-cols-[auto,1fr] md:gap-8 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
-                <p className="text-sm font-medium text-gray-400 md:text-base md:text-gray-200">
+              <div className="grid items-start gap-6 transition-all duration-500 rounded-lg md:grid-cols-[auto,1fr] md:gap-8 md:p-6 lg:p-8 md:hover:scale-105 md:hover:bg-black-800">
+                <p className="text-sm font-medium text-gray-400 md:text-base md:text-gray-200 lg:text-lg">
                   2025 - Actualmente
                 </p>
                 <div>
-                  <h4 className="text-xl text-gray-50 md:text-2xl">
+                  <h4 className="text-xl text-gray-50 md:text-2xl lg:text-3xl">
                     Desarrollador Software
                   </h4>
-                  <p className="mt-3 text-sm leading-relaxed text-gray-300 md:text-base">
+                  <p className="mt-3 text-base leading-relaxed text-gray-300 md:text-lg">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Beatae impedit veritatis, nobis officia deleniti blanditiis
                     culpa cum error molestiae aliquam accusamus aut a odio
@@ -239,15 +239,15 @@ const Sobremi = () => {
                 </div>
               </div>
 
-              <div className="grid items-start gap-6 transition-all duration-500 rounded-lg md:grid-cols-[auto,1fr] md:gap-8 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
-                <p className="text-sm font-medium text-gray-400 md:text-base md:text-gray-200">
+              <div className="grid items-start gap-6 transition-all duration-500 rounded-lg md:grid-cols-[auto,1fr] md:gap-8 md:p-6 lg:p-8 md:hover:scale-105 md:hover:bg-black-800">
+                <p className="text-sm font-medium text-gray-400 md:text-base md:text-gray-200 lg:text-lg">
                   2023 - 2025
                 </p>
                 <div>
-                  <h4 className="text-xl text-gray-50 md:text-2xl">
+                  <h4 className="text-xl text-gray-50 md:text-2xl lg:text-3xl">
                     Desarrollador de Diagnosis
                   </h4>
-                  <p className="mt-3 text-sm leading-relaxed text-gray-300 md:text-base">
+                  <p className="mt-3 text-base leading-relaxed text-gray-300 md:text-lg">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Beatae impedit veritatis, nobis officia deleniti blanditiis
                     culpa cum error molestiae aliquam accusamus aut a odio
@@ -266,15 +266,15 @@ const Sobremi = () => {
                 </div>
               </div>
 
-              <div className="grid items-start gap-6 transition-all duration-500 rounded-lg md:grid-cols-[auto,1fr] md:gap-8 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
-                <p className="text-sm font-medium text-gray-400 md:text-base md:text-gray-200">
+              <div className="grid items-start gap-6 transition-all duration-500 rounded-lg md:grid-cols-[auto,1fr] md:gap-8 md:p-6 lg:p-8 md:hover:scale-105 md:hover:bg-black-800">
+                <p className="text-sm font-medium text-gray-400 md:text-base md:text-gray-200 lg:text-lg">
                   2022 - 2023
                 </p>
                 <div>
-                  <h4 className="text-xl text-gray-50 md:text-2xl">
+                  <h4 className="text-xl text-gray-50 md:text-2xl lg:text-3xl">
                     Desarrollador Fullstack (Prácticas)
                   </h4>
-                  <p className="mt-3 text-sm leading-relaxed text-gray-300 md:text-base">
+                  <p className="mt-3 text-base leading-relaxed text-gray-300 md:text-lg">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Beatae impedit veritatis, nobis officia deleniti blanditiis
                     culpa cum error molestiae aliquam accusamus aut a odio

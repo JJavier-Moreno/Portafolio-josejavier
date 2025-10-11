@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-size: 17px;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 19px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      font-size: 20px;
+    }
+  }
+
+  body {
+    line-height: 1.75;
+  }
+}
+
 
 .fade-mask {
   -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);

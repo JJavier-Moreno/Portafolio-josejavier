@@ -12,10 +12,10 @@ const Header = () => {
       <div className="absolute inset-0 z-0 flex w-full h-full transition-opacity bg-background/90 dark:bg-background/95 backdrop-blur-sm"></div>
 
       <nav className="relative z-10 flex items-center justify-between border-b border-border-default">
-        <div className="flex items-center justify-between w-full h-16 px-6 lg:container lg:px-16 xl:px-20">
+        <div className="flex items-center justify-between w-full h-20 px-6 sm:px-8 lg:container lg:px-16 xl:px-24">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="block text-2xl font-semibold">
+            <a href="/" className="block text-2xl font-semibold sm:text-3xl">
               Moreno<span className="text-green-500">Dev</span>
             </a>
           </div>
@@ -53,7 +53,7 @@ const Header = () => {
             className={`${
               isOpen
                 ? "fixed top-0 left-0 z-50 w-full h-screen bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center space-y-6 md:hidden"
-                : "hidden justify-center md:flex flex-1 lg:justify-start lg:pl-8 space-x-4 items-center"
+                : "hidden justify-center md:flex flex-1 lg:justify-start lg:pl-10 space-x-6 items-center"
             }`}
           >
             {["Inicio", "Sobre mi", "Proyectos", "Contacto"].map(
@@ -61,7 +61,7 @@ const Header = () => {
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase().replace(" ", "-")}`}
-                    className="text-sm font-medium transition-colors hover:text-green-400 md:text-base"
+                    className="text-base font-medium transition-colors hover:text-green-400 md:text-lg lg:text-xl"
                     onClick={() => setIsOpen(false)} // cierra menú en móviles
                   >
                     {item}
@@ -91,7 +91,7 @@ const Header = () => {
               rel="noopener noreferrer"
               className=""
             >
-              <div className="p-2 transition bg-gray-800 rounded-full hover:bg-green-500">
+              <div className="p-3 transition bg-gray-800 rounded-full hover:bg-green-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -111,7 +111,7 @@ const Header = () => {
               rel="noopener noreferrer"
               className=""
             >
-              <div className="p-2 transition bg-gray-800 rounded-full hover:bg-blue-500">
+              <div className="p-3 transition bg-gray-800 rounded-full hover:bg-blue-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -131,7 +131,7 @@ const Header = () => {
               rel="noopener noreferrer"
               className=""
             >
-              <div className="p-2 transition bg-gray-800 rounded-full hover:bg-pink-500">
+              <div className="p-3 transition bg-gray-800 rounded-full hover:bg-pink-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"

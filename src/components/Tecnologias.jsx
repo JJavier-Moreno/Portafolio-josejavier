@@ -4,29 +4,28 @@ const Tecnologias = () => {
   const [tech, setTech] = useState("Diariamente");
 
   const handleTech = (e) => {
-    console.log(e);
     setTech(e.target.dataset.text);
   };
 
   return (
-    <div className="flex flex-col items-center justify-between w-full gap-6 mt-12 md:mt-20 xl:flex-row md:px-20">
-      <h3 className="flex text-left xl:flex-col md:gap-2 whitespace-nowrap">
-        <span className="text-lg text-gray-300 md:text-gray-400 md:text-3xl">
+    <div className="flex flex-col items-center justify-between w-full max-w-6xl gap-8 px-2 mx-auto mt-12 md:mt-20 xl:flex-row md:px-8 lg:px-12">
+      <h3 className="flex text-left xl:flex-col md:gap-3 whitespace-nowrap">
+        <span className="text-xl text-gray-300 md:text-gray-400 md:text-3xl lg:text-4xl">
           Teconologías con las que trabajo
         </span>
         <div className="hidden md:block">
-          <span className="text-xl font-semibold text-gray-50 xl:text-left md:text-3xl">
+          <span className="text-2xl font-semibold text-gray-50 xl:text-left md:text-3xl lg:text-4xl">
             {tech}
           </span>
         </div>
       </h3>
 
-      {/* <!-- Tecnologias --> */}  
-      <div className="grid grid-cols-5 gap-1 md:grid-cols-10 group">
+      {/* <!-- Tecnologias --> */}
+      <div className="grid grid-cols-5 gap-2 sm:gap-3 md:grid-cols-10 group">
         {/* <!-- HTML --> */}
         <div className="transition-all duration-300 peer group-hover:opacity-40 hover:!opacity-100">
           <div
-            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100"
+            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100 md:w-20 md:h-20 lg:w-24 lg:h-24 lg:text-white"
             data-text="HTML"
             onMouseEnter={handleTech}
             onMouseLeave={() => setTech("Diariamente")}
@@ -47,7 +46,7 @@ const Tecnologias = () => {
         {/* <!-- JS --> */}
         <div className="transition-all duration-300 peer group-hover:opacity-40 hover:!opacity-100">
           <div
-            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100"
+            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100 md:w-20 md:h-20 lg:w-24 lg:h-24 lg:text-white"
             data-text="JS"
             onMouseEnter={handleTech}
             onMouseLeave={() => setTech("Diariamente")}
@@ -69,7 +68,7 @@ const Tecnologias = () => {
         {/* <!-- React--> */}
         <div className="transition-all duration-300 peer group-hover:opacity-40 hover:!opacity-100">
           <div
-            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100"
+            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100 md:w-20 md:h-20 lg:w-24 lg:h-24 lg:text-white"
             data-text="React"
             onMouseEnter={handleTech}
             onMouseLeave={() => setTech("Diariamente")}
@@ -91,7 +90,7 @@ const Tecnologias = () => {
         {/* <!-- Node JS --> */}
         <div className="transition-all duration-300 peer group-hover:opacity-40 hover:!opacity-100">
           <div
-            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100"
+            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100 md:w-20 md:h-20 lg:w-24 lg:h-24 lg:text-white"
             data-text="Node JS"
             onMouseEnter={handleTech}
             onMouseLeave={() => setTech("Diariamente")}
@@ -113,7 +112,7 @@ const Tecnologias = () => {
         {/* <!-- Astro --> */}
         <div className="transition-all duration-300 peer group-hover:opacity-40 hover:!opacity-100">
           <div
-            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100"
+            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100 md:w-20 md:h-20 lg:w-24 lg:h-24 lg:text-white"
             data-text="Astro"
             onMouseEnter={handleTech}
             onMouseLeave={() => setTech("Diariamente")}
@@ -135,7 +134,7 @@ const Tecnologias = () => {
         {/* <!-- CSS --> */}
         <div className="transition-all duration-300 peer group-hover:opacity-40 hover:!opacity-100">
           <div
-            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100"
+            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100 md:w-20 md:h-20 lg:w-24 lg:h-24 lg:text-white"
             data-text="CSS"
             onMouseEnter={handleTech}
             onMouseLeave={() => setTech("Diariamente")}
@@ -157,7 +156,7 @@ const Tecnologias = () => {
         {/* <!-- MongoDB--> */}
         <div className="transition-all duration-300 peer group-hover:opacity-40 hover:!opacity-100">
           <div
-            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100"
+            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100 md:w-20 md:h-20 lg:w-24 lg:h-24 lg:text-white"
             data-text="Mongo DB"
             onMouseEnter={handleTech}
             onMouseLeave={() => setTech("Diariamente")}
@@ -179,7 +178,7 @@ const Tecnologias = () => {
         {/* <!-- MYSQL --> */}
         <div className="transition-all duration-300 peer group-hover:opacity-40 hover:!opacity-100">
           <div
-            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100"
+            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100 md:w-20 md:h-20 lg:w-24 lg:h-24 lg:text-white"
             data-text="MYSQL"
             onMouseEnter={handleTech}
             onMouseLeave={() => setTech("Diariamente")}
@@ -201,7 +200,7 @@ const Tecnologias = () => {
         {/* <!-- PHP--> */}
         <div className="transition-all duration-300 peer group-hover:opacity-40 hover:!opacity-100">
           <div
-            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100"
+            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100 md:w-20 md:h-20 lg:w-24 lg:h-24 lg:text-white"
             data-text="PHP"
             onMouseEnter={handleTech}
             onMouseLeave={() => setTech("Diariamente")}
@@ -223,7 +222,7 @@ const Tecnologias = () => {
         {/* <!-- GIT--> */}
         <div className="transition-all duration-300 peer group-hover:opacity-40 hover:!opacity-100">
           <div
-            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100"
+            className="flex items-center justify-center w-16 h-16 m-1 text-gray-500 transition-all duration-300 border border-transparent rounded-md hover:border-gray-400 hover:text-gray-100 md:w-20 md:h-20 lg:w-24 lg:h-24 lg:text-white"
             data-text="GIT"
             onMouseEnter={handleTech}
             onMouseLeave={() => setTech("Diariamente")}

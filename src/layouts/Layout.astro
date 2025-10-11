@@ -24,7 +24,7 @@ const { title } = Astro.props;
   <body class="font-sans bg-black-900">
     <Header client:load />
     <main class="relative min-h-screen" id="inicio">
-      <section class="relative mt-14 md:mt-16">
+      <section class="relative mt-16 md:mt-20 lg:mt-24">
         <div class="absolute inset-0 overflow-hidden -z-10">
   <LiquidEther
   client:load
@@ -51,12 +51,12 @@ const { title } = Astro.props;
           ></div>
         </div>
         <div
-          class="container relative px-6 py-12 mx-auto md:py-20 lg:px-16 xl:px-20"
+          class="container relative px-6 py-14 mx-auto sm:px-8 md:py-24 lg:px-16 xl:px-24"
         >
           <div class="relative">
             <div class="mx-auto">
               <div
-                class="flex justify-center mx-auto text-center max-w-1xl md:max-w-3xl"
+                class="flex justify-center mx-auto text-center max-w-4xl"
               >
                 <div class="relative flex flex-col items-center">
                   <!-- Degradado radial verde claro, detrás del texto -->
@@ -73,13 +73,13 @@ const { title } = Astro.props;
                   </div>
                   <div class="flex flex-col items-center">
                     <h1
-                      class="text-4xl font-semibold text-center text-white sm:text-5xl md:text-6xl xl:text-7xl"
+                      class="text-4xl font-semibold leading-tight text-center text-white sm:text-5xl md:text-6xl md:leading-[1.1] xl:text-7xl"
                     >
                       <span class="block text-foreground">
                         Jose Javier Moreno
                       </span>
                       <span
-                        class="relative inline-block w-[180px] md:w-[500px] h-[42px] md:h-[80px]"
+                        class="relative inline-flex w-[220px] h-[48px] sm:w-[300px] sm:h-[56px] md:w-[460px] md:h-[82px] lg:w-[520px] lg:h-[92px]"
                       >
                         <div
                           class="absolute inset-0 flex items-center justify-center gap-1 mt-1 md:gap-2"
@@ -88,7 +88,7 @@ const { title } = Astro.props;
                           <RotatingText
                             client:load
                             texts={["Frontend", "Backend", "FullStack"]}
-                            mainClassName="w-full h-full px-2 md:px-3 bg-green-400 text-black py-1 md:py-1 justify-center rounded-lg text-center whitespace-nowrap"
+                            mainClassName="w-full h-full px-2 sm:px-3 md:px-4 bg-green-400 text-black py-1 md:py-2 justify-center rounded-lg text-center whitespace-nowrap text-sm sm:text-base md:text-lg"
                             staggerFrom="last"
                             initial={{ y: "100%" }}
                             animate={{ y: 0 }}
@@ -105,22 +105,21 @@ const { title } = Astro.props;
                         </div>
                       </span>
                     </h1>
-                    <p class="pt-4 my-4 text-base leading-relaxed text-gray-200 sm:text-lg lg:text-xl">
+                    <p class="pt-4 my-6 text-lg leading-relaxed text-gray-200 sm:text-xl md:text-[1.375rem] lg:text-2xl max-w-3xl">
                       Hola, soy Jose Javier. Desarrollador de software fullstack
                       con 2 años de experiencia. Me encanta crear soluciones
                       atractivas e innovadoras. Así como aplicaciones que ayuden
                       a mejorar la vida de las personas.
                     </p>
                   </div>
-                  <div class="flex items-center justify-center gap-4 mt-10">
+                  <div class="flex flex-wrap items-center justify-center gap-4 mt-12">
                     <a
-                      class="relative flex inline-flex justify-center px-5 py-2 space-x-2 text-sm font-medium text-center text-white transition-all duration-200 ease-out border rounded-md outline-none md:px-5 md:py-3 md:text-base bg-verde-btn-700 border-verde-btn-600 hover:bg-verde-btn-500 focus-visile:outline-4 focus:visible:outline-offset-1 focus-visible:ouline-green-600"
+                      class="relative flex inline-flex justify-center px-6 py-3 space-x-2 text-base font-semibold text-center text-white transition-all duration-200 ease-out border rounded-md outline-none md:px-7 md:py-3.5 md:text-lg bg-verde-btn-700 border-verde-btn-600 hover:bg-verde-btn-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
                       href="/images/CV - Jose Javier Moreno Clavijos.pdf"
-                      class="btn btn-primary"
                       download>Descargar CV</a
                     >
                     <a
-                      class="relative flex inline-flex justify-center px-5 py-2 space-x-2 text-sm font-medium text-center text-white transition-all duration-200 ease-out border border-green-100 rounded-md outline-none md:text-base md:px-5 bg-verde-btn-400 focus-visile:outline-4 focus:visible:outline-offset-1 focus-visible:ouline-green-600"
+                      class="relative flex inline-flex justify-center px-6 py-3 space-x-2 text-base font-semibold text-center text-white transition-all duration-200 ease-out border border-green-100 rounded-md outline-none md:text-lg md:px-7 md:py-3.5 bg-verde-btn-400 hover:bg-verde-btn-500/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
                       href="#">Contactar</a
                     >
                   </div>
@@ -129,20 +128,20 @@ const { title } = Astro.props;
             </div>
           </div>
           <div class="overflow-hidden">
-            <div class="max-w-2xl mx-auto mt-16 md:mt-20 fade-mask">
+            <div class="max-w-3xl mx-auto mt-16 md:mt-24 fade-mask">
               <div
                 class="flex space-x-8 text-white animate-marquee2 whitespace-nowrap lg:px-8"
               >
-                <span class="text-sm sm:text-base md:text-lg">🔍 Detallista</span>
-                <span class="text-sm sm:text-base md:text-lg">💡 Creativo</span>
-                <span class="text-sm sm:text-base md:text-lg">⚡ Proactivo</span>
-                <span class="text-sm sm:text-base md:text-lg">🛠️ Resolutivo</span>
-                <span class="text-sm sm:text-base md:text-lg">🧠 Autodidacta</span>
-                <span class="text-sm sm:text-base md:text-lg">🔍 Detallista</span>
-                <span class="text-sm sm:text-base md:text-lg">💡 Creativo</span>
-                <span class="text-sm sm:text-base md:text-lg">⚡ Proactivo</span>
-                <span class="text-sm sm:text-base md:text-lg">🛠️ Resolutivo</span>
-                <span class="text-sm sm:text-base md:text-lg">🧠 Autodidacta</span>
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl">🔍 Detallista</span>
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl">💡 Creativo</span>
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl">⚡ Proactivo</span>
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl">🛠️ Resolutivo</span>
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl">🧠 Autodidacta</span>
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl">🔍 Detallista</span>
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl">💡 Creativo</span>
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl">⚡ Proactivo</span>
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl">🛠️ Resolutivo</span>
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl">🧠 Autodidacta</span>
               </div>
             </div>
           </div>
@@ -150,25 +149,25 @@ const { title } = Astro.props;
       </section>
 
       <div
-        class="container relative py-12 mx-auto px-7 md:py-20 md:px-14 lg:px-16 xl:px-20"
+        class="container relative py-16 mx-auto px-6 sm:px-8 md:py-24 md:px-14 lg:px-20 xl:px-24"
       >
         <Sobremi client:load />
       </div>
 
       <div
-        class="container relative py-12 mx-auto px-7 md:py-20 md:px-14 lg:py-24 lg:px-20 xl:px-20"
+        class="container relative py-16 mx-auto px-6 sm:px-8 md:py-24 md:px-14 lg:py-28 lg:px-20 xl:px-24"
       >
         <section class="relative flex flex-col items-center" id="proyectos">
 
             <ScrollFloat client:load text="Proyectos"></ScrollFloat>
 
-            <div class="relative w-full max-w-3xl mx-auto mt-12 group">
+            <div class="relative w-full max-w-4xl mx-auto mt-14 group">
               <!-- Imagen -->
               <div class="overflow-hidden rounded-lg">
                 <img
                   src="/images/portafolio.png"
                   alt="Proyecto"
-                  class="object-cover w-full h-[440px] sm:h-[420px] md:h-[360px] lg:h-[320px] xl:h-[360px] transition"
+                  class="object-cover w-full h-auto transition aspect-[4/3] sm:aspect-[3/2] lg:aspect-[16/9]"
                 />
                 <!-- Capa verde -->
                 <div
@@ -179,13 +178,13 @@ const { title } = Astro.props;
 
               <!-- Contenido -->
               <div
-                class="absolute inset-0 flex flex-col items-center justify-center px-4 py-8 text-center text-gray-200 bg-black-800/80 backdrop-blur-sm z-10 lg:static lg:bg-transparent lg:backdrop-blur-none lg:items-end lg:justify-center lg:w-[60%] lg:ml-[40%] lg:pl-8 lg:py-8 lg:text-right lg:rounded-lg"
+                class="absolute inset-0 flex flex-col items-center justify-center px-5 py-10 text-center text-gray-200 bg-black-800/80 backdrop-blur-sm z-10 lg:static lg:bg-transparent lg:backdrop-blur-none lg:items-end lg:justify-center lg:w-[58%] lg:ml-[42%] lg:pl-10 lg:py-10 lg:text-right lg:rounded-lg"
               >
                 <p class="text-sm font-medium text-green-400 sm:text-base">Proyecto Destacado</p>
-                <h3 class="mt-2 text-2xl font-semibold text-white md:text-3xl">
+                <h3 class="mt-3 text-3xl font-semibold text-white md:text-4xl">
                   Halcyon Theme
                 </h3>
-                <p class="max-w-xs mt-4 text-sm leading-relaxed sm:text-base lg:max-w-md">
+                <p class="max-w-md mt-5 text-base leading-relaxed sm:text-lg lg:text-xl lg:max-w-lg">
                   A minimal, dark blue theme for VS Code, Sublime Text, Atom,
                   iTerm, and more. Available on
                   <span class="text-teal-400 underline"
@@ -198,7 +197,7 @@ const { title } = Astro.props;
                   <span class="text-teal-400 underline">npm</span>.
                 </p>
                 <ul
-                  class="flex flex-wrap justify-center gap-2 mt-5 text-xs text-gray-300 sm:text-sm lg:justify-end"
+                  class="flex flex-wrap justify-center gap-2 mt-6 text-xs text-gray-300 sm:text-sm md:text-base lg:justify-end"
                 >
                   <li>VS Code</li>
                   <li>Sublime Text</li>
@@ -207,7 +206,7 @@ const { title } = Astro.props;
                   <li>Hyper</li>
                 </ul>
                 <ul
-                  class="flex justify-center gap-4 mt-4 text-teal-400 lg:justify-end"
+                  class="flex justify-center gap-5 mt-5 text-lg text-teal-400 lg:justify-end"
                 >
                   <li>
                     <a href="#" class="transition hover:text-white">🔗</a>
@@ -224,26 +223,26 @@ const { title } = Astro.props;
         </div>
       </div>
       <div
-        class="container relative px-6 py-16 mx-auto md:py-24 lg:px-16 xl:px-10"
+        class="container relative px-6 py-20 mx-auto sm:px-8 md:py-28 md:px-14 lg:px-20 xl:px-24"
       >
         <section class="relative flex flex-col items-center" id="contacto">
-          <h2 class="text-3xl font-semibold text-center text-white md:text-4xl">
+          <h2 class="text-3xl font-semibold text-center text-white md:text-5xl">
             Contacto
           </h2>
-          <p class="max-w-3xl mt-4 text-base leading-relaxed text-center text-gray-400 sm:text-lg">
+          <p class="max-w-3xl mt-5 text-lg leading-relaxed text-center text-gray-400 sm:text-xl md:text-[1.375rem]">
             Si necesitas una web, tienes algún proyecto en mente que quieres
             lleva a cabo, o simplemente quieres hablar sobre temas tech, no
             dudes en contactar conmigo!
           </p>
 
-          <div class="mt-10">
-            <div class="grid gap-6 md:grid-cols-2">
+          <div class="mt-12">
+            <div class="grid gap-8 md:grid-cols-2 md:gap-10">
               <div class="flex flex-col gap-2">
-                <h3 class="text-lg font-medium text-center text-green-400 md:text-xl">
+                <h3 class="text-xl font-semibold text-center text-green-400 md:text-2xl">
                   Información de contacto
                 </h3>
                 <div
-                  class="flex items-center gap-4 p-4 transition-all duration-300 rounded-md bg-black-700 hover:scale-105"
+                  class="flex items-center gap-5 p-5 transition-all duration-300 rounded-xl bg-black-700 hover:scale-105"
                 >
                   <div class="p-2 bg-green-500 rounded-sm text-gray-50">
                     <svg
@@ -263,15 +262,15 @@ const { title } = Astro.props;
                   </div>
 
                   <div>
-                    <p class="text-sm font-medium text-gray-500">Email</p>
-                    <p class="text-base text-gray-50">
+                    <p class="text-sm font-medium text-gray-500 md:text-base">Email</p>
+                    <p class="text-base text-gray-50 md:text-lg">
                       josejavier.moreno.frz@gmail.com
                     </p>
                   </div>
                 </div>
                 <div class="">
                   <div
-                    class="flex items-center gap-4 p-4 transition-all duration-300 rounded-md bg-black-700 hover:scale-105"
+                    class="flex items-center gap-5 p-5 transition-all duration-300 rounded-xl bg-black-700 hover:scale-105"
                   >
                     <div class="p-2 bg-green-500 rounded-sm text-gray-50">
                       <svg
@@ -293,15 +292,15 @@ const { title } = Astro.props;
                     </div>
 
                     <div>
-                      <p class="text-sm font-medium text-gray-500">Teléfono</p>
-                      <p class="text-base text-gray-50">662092982</p>
+                      <p class="text-sm font-medium text-gray-500 md:text-base">Teléfono</p>
+                      <p class="text-base text-gray-50 md:text-lg">662092982</p>
                     </div>
                   </div>
                 </div>
 
                 <div class="">
                   <div
-                    class="flex items-center gap-4 p-4 transition-all duration-300 rounded-md bg-black-700 hover:scale-105"
+                    class="flex items-center gap-5 p-5 transition-all duration-300 rounded-xl bg-black-700 hover:scale-105"
                   >
                     <div class="p-2 bg-green-500 rounded-sm text-gray-50">
                       <svg
@@ -327,53 +326,53 @@ const { title } = Astro.props;
                     </div>
 
                     <div>
-                      <p class="text-sm font-medium text-gray-500">Ubicación</p>
-                      <p class="text-base text-gray-50">Albacete</p>
+                      <p class="text-sm font-medium text-gray-500 md:text-base">Ubicación</p>
+                      <p class="text-base text-gray-50 md:text-lg">Albacete</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="w-full p-6 rounded-md bg-black-700">
+              <div class="w-full p-6 rounded-xl bg-black-700 md:p-8">
                 <form>
-                  <h3 class="mb-6 text-xl font-semibold text-green-400 md:text-2xl">
+                  <h3 class="mb-6 text-2xl font-semibold text-green-400 md:text-3xl">
                     Envíame un mensaje
                   </h3>
                   <fieldset class="grid w-full grid-cols-2 gap-4">
                     <div class="flex flex-col col-span-1">
-                      <label for="name" class="text-sm font-medium text-gray-400">Nombre</label>
+                      <label for="name" class="text-sm font-medium text-gray-400 md:text-base">Nombre</label>
                       <input
                         type="text"
                         id="name"
-                        class="px-3 py-2 mt-1 bg-gray-200 border-gray-600 border-solid rounded-md border-1 focus:outline-offset-0 focus:outline-green-600"
+                        class="px-3 py-2 mt-1 text-base bg-gray-200 border-gray-600 border-solid rounded-md border-1 focus:outline-offset-0 focus:outline-green-600 md:px-4 md:py-3"
                       />
                     </div>
                     <div class="flex flex-col col-span-1">
-                      <label for="email" class="text-sm font-medium text-gray-400">Email</label>
+                      <label for="email" class="text-sm font-medium text-gray-400 md:text-base">Email</label>
                       <input
                         type="email"
                         id="email"
-                        class="px-3 py-2 mt-1 bg-gray-200 border-gray-600 border-solid rounded-md border-1 focus:outline-offset-0 focus:outline-green-600"
+                        class="px-3 py-2 mt-1 text-base bg-gray-200 border-gray-600 border-solid rounded-md border-1 focus:outline-offset-0 focus:outline-green-600 md:px-4 md:py-3"
                       />
                     </div>
                     <div class="flex flex-col col-span-2">
-                      <label for="subject" class="text-sm font-medium text-gray-400">Asunto</label>
+                      <label for="subject" class="text-sm font-medium text-gray-400 md:text-base">Asunto</label>
                       <input
                         type="text"
                         id="subject"
-                        class="px-3 py-2 mt-1 bg-gray-200 border-gray-600 border-solid rounded-md border-1 focus:outline-offset-0 focus:outline-green-600"
+                        class="px-3 py-2 mt-1 text-base bg-gray-200 border-gray-600 border-solid rounded-md border-1 focus:outline-offset-0 focus:outline-green-600 md:px-4 md:py-3"
                       />
                     </div>
                     <div class="flex flex-col col-span-2">
-                      <label for="message" class="text-sm font-medium text-gray-400">Mensaje</label>
+                      <label for="message" class="text-sm font-medium text-gray-400 md:text-base">Mensaje</label>
                       <textarea
                         id="message"
-                        class="px-3 py-2 mt-1 bg-gray-200 border-gray-600 border-solid rounded-md border-1 focus:outline-offset-0 focus:outline-green-600"
+                        class="px-3 py-2 mt-1 text-base bg-gray-200 border-gray-600 border-solid rounded-md border-1 focus:outline-offset-0 focus:outline-green-600 md:px-4 md:py-3"
                       ></textarea>
                     </div>
                   </fieldset>
                   <button
                     type="submit"
-                    class="w-full px-4 py-3 mt-6 text-sm font-medium text-center transition-all duration-200 ease-in rounded-md cursor-pointer md:text-base hover:bg-verde-btn-500 border-verde-btn-600 bg-verde-btn-700 text-gray-50"
+                    class="w-full px-5 py-3.5 mt-8 text-base font-semibold text-center transition-all duration-200 ease-in rounded-md cursor-pointer md:px-6 md:py-4 md:text-lg hover:bg-verde-btn-500 border-verde-btn-600 bg-verde-btn-700 text-gray-50"
                     >Enviar</button
                   >
                 </form>
@@ -383,8 +382,8 @@ const { title } = Astro.props;
         </section>
       </div>
       <ChatBot client:load/>
-      <footer class="w-full py-8 border-t border-gray-800 bg-negro-900">
-        <p class="text-sm text-center text-gray-400">
+      <footer class="w-full py-10 border-t border-gray-800 bg-negro-900">
+        <p class="text-base text-center text-gray-400 md:text-lg">
           &copy 2025 Jose Javier Moreno Clavijos - Todos los derechos
           reservados.
         </p>
