@@ -6,7 +6,7 @@ import ChatBot from "../components/Chatbot.jsx";
 import RotatingText from "../components/RotatingText";
 import ScrollFloat from "../components/ScrollFloat.jsx";
 import Tecnologias from "../components/Tecnologias.jsx";
-import { LiquidEther } from "reactbits";
+import LiquidEther from '../components/LiquidEther.jsx';
 const { title } = Astro.props;
 ---
 
@@ -25,16 +25,26 @@ const { title } = Astro.props;
     <Header client:load />
     <main class="relative min-h-screen" id="inicio">
       <section class="relative mt-14 md:mt-16">
-        <div class="absolute inset-0 -z-10 overflow-hidden">
-          <LiquidEther
-            client:load
-            className="absolute inset-0 pointer-events-none"
-            colors={["#2aff95", "#0a241c", "#020409"]}
-            mouseForce={28}
-            speed={0.6}
-            resolution={0.9}
-            backgroundColor="#020617"
-          />
+        <div class="absolute inset-0 overflow-hidden -z-10">
+  <LiquidEther
+  client:load
+    colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
+    mouseForce={20}
+    cursorSize={100}
+    isViscous={false}
+    viscous={30}
+    iterationsViscous={32}
+    iterationsPoisson={32}
+    resolution={0.5}
+    isBounce={false}
+    autoDemo={true}
+    autoSpeed={0.5}
+    autoIntensity={2.2}
+    takeoverDuration={0.25}
+    autoResumeDelay={3000}
+    autoRampDuration={0.6}
+  />
+
           <div
             class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/90 backdrop-blur-[2px] pointer-events-none"
             aria-hidden="true"
@@ -104,13 +114,13 @@ const { title } = Astro.props;
                   </div>
                   <div class="flex items-center justify-center gap-4 mt-10">
                     <a
-                      class="relative flex inline-flex justify-center px-5 py-2 space-x-2 text-center text-white transition-all duration-200 ease-out border rounded-md outline-none text-sm md:px-5 md:py-3 md:text-base font-medium bg-verde-btn-700 border-verde-btn-600 hover:bg-verde-btn-500 focus-visile:outline-4 focus:visible:outline-offset-1 focus-visible:ouline-green-600"
+                      class="relative flex inline-flex justify-center px-5 py-2 space-x-2 text-sm font-medium text-center text-white transition-all duration-200 ease-out border rounded-md outline-none md:px-5 md:py-3 md:text-base bg-verde-btn-700 border-verde-btn-600 hover:bg-verde-btn-500 focus-visile:outline-4 focus:visible:outline-offset-1 focus-visible:ouline-green-600"
                       href="/images/CV - Jose Javier Moreno Clavijos.pdf"
                       class="btn btn-primary"
                       download>Descargar CV</a
                     >
                     <a
-                      class="relative flex inline-flex justify-center px-5 py-2 space-x-2 text-center text-white transition-all duration-200 ease-out border border-green-100 rounded-md outline-none text-sm md:text-base md:px-5 font-medium bg-verde-btn-400 focus-visile:outline-4 focus:visible:outline-offset-1 focus-visible:ouline-green-600"
+                      class="relative flex inline-flex justify-center px-5 py-2 space-x-2 text-sm font-medium text-center text-white transition-all duration-200 ease-out border border-green-100 rounded-md outline-none md:text-base md:px-5 bg-verde-btn-400 focus-visile:outline-4 focus:visible:outline-offset-1 focus-visible:ouline-green-600"
                       href="#">Contactar</a
                     >
                   </div>
@@ -140,13 +150,13 @@ const { title } = Astro.props;
       </section>
 
       <div
-        class="container relative px-7 py-12 mx-auto md:py-20 md:px-14 lg:px-16 xl:px-20"
+        class="container relative py-12 mx-auto px-7 md:py-20 md:px-14 lg:px-16 xl:px-20"
       >
         <Sobremi client:load />
       </div>
 
       <div
-        class="container relative px-7 py-12 mx-auto md:py-20 md:px-14 lg:py-24 lg:px-20 xl:px-20"
+        class="container relative py-12 mx-auto px-7 md:py-20 md:px-14 lg:py-24 lg:px-20 xl:px-20"
       >
         <section class="relative flex flex-col items-center" id="proyectos">
 
