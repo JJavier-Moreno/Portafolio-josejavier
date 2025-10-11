@@ -9,6 +9,10 @@
   ],
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "paths": {
+      "reactbits": ["./src/lib/reactbits/index.js"],
+      "reactbits/*": ["./src/lib/reactbits/*"]
+    }
   }
 }
