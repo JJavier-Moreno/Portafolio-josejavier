@@ -6,7 +6,7 @@ const Sobremi = () => {
   const [seccion, setSeccion] = useState("historia");
 
   const classButton = (key) =>
-    `px-3 py-2 md:px-6 md:py-2 text-md border rounded-xl md:rounded-2xl transition-all duration-500 ${
+    `px-3 py-2 text-sm md:px-5 md:py-2 md:text-base border rounded-xl md:rounded-2xl transition-all duration-500 ${
       seccion === key
         ? "text-gray-200  border-gray-300 shadow-md shadow-gray-400/20"
         : "text-gray-400  border-gray-700 "
@@ -23,7 +23,7 @@ const Sobremi = () => {
     <section className="relative flex flex-col items-center" id="sobre-mi">
       <ScrollFloat text="Sobre mi" />
       {/* <h2 className="text-3xl font-bold text-white lg:text-5xl"> Sobre mi</h2> */}
-      <p className="mt-6 text-gray-400 text-md">
+      <p className="mt-6 text-base leading-relaxed text-gray-300 md:text-lg">
         Conoce un poco más sobre mi trayectoria personal, educativa y
         profesional
       </p>
@@ -61,10 +61,10 @@ const Sobremi = () => {
           className="w-full mt-10 md:mt-10 lg:px-20 xl:px-40"
         >
           <div className="w-full px-4 md:px-0 xl:px-20">
-            <h3 className="text-xl font-semibold text-green-500 md:text-xl">
+            <h3 className="text-2xl font-semibold text-green-500 md:text-3xl">
               Mi historia
             </h3>
-            <p className="mt-4 text-white text-md md:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-white md:text-lg">
               Desde pequeño siempre fui un apasionado por la tecnología, es por
               ello que, cuando crecí, decidí graduarme en Ingenería Informática.
               Durante la carrera fui capaz de desarrollar habilidades como:
@@ -90,19 +90,19 @@ const Sobremi = () => {
           className="w-full mt-10 md:mt-10 lg:px-20 xl:px-40"
         >
           <div className="w-full xl:px-20">
-            <h3 className="text-xl font-semibold text-center text-green-500 md:text-left md:text-xl">
+            <h3 className="text-2xl font-semibold text-center text-green-500 md:text-left md:text-3xl">
               Estudios Cursados
             </h3>
             <div className="grid mt-4 transition-all duration-500 ease-in-out rounded-lg w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 hover:scale-105 hover:bg-black-800">
               <div className="flex text-gray-400 align-top md:text-gray-200 w-max">
-                <p className="md:text-md">2023 - Actualmente</p>
+                <p className="text-sm md:text-base">2023 - Actualmente</p>
               </div>
               <div>
                 <div>
-                  <h4 className="text-xl md:text-xl text-gray-50">
+                  <h4 className="text-xl text-gray-50 md:text-2xl">
                     Master Desarrollo FullStack
                   </h4>
-                  <p className="text-gray-500 text-md">
+                  <p className="text-sm text-gray-400 md:text-base">
                     Conquer Blocks - Online
                   </p>
                 </div>
@@ -110,26 +110,26 @@ const Sobremi = () => {
             </div>
             <div className="grid mt-4 transition-all duration-500 ease-in-out rounded-lg w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
               <div className="flex text-gray-400 align-top md:text-gray-200 w-max">
-                <p className="md:text-md">2018 - 2023</p>
+                <p className="text-sm md:text-base">2018 - 2023</p>
               </div>
               <div>
                 <div>
-                  <h4 className="text-xl md:text-xl text-gray-50">
+                  <h4 className="text-xl text-gray-50 md:text-2xl">
                     Grado en Ingeniería Informática
                   </h4>
-                  <p className="text-gray-500 text-md">
+                  <p className="text-sm text-gray-400 md:text-base">
                     Universidad de Castilla La-Mancha - Albacete
                   </p>
                 </div>
               </div>
             </div>
-            <div className="mt-5">
-              <h5 className="text-lg font-semibold text-center text-green-500 md:text-left md:text-xl">
+            <div className="mt-6">
+              <h5 className="text-xl font-semibold text-center text-green-500 md:text-left md:text-2xl">
                 Otros estudios
               </h5>
               <div className="grid mt-4 md:mt-4 md:gap-5 md:grid-cols-3">
                 <div className="flex flex-col transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
-                  <p className="flex items-center text-xl text-gray-50">
+                  <p className="flex items-center text-lg text-gray-50 md:text-xl">
                     Curso de Javascript{" "}
                     <span className="ml-2">
                       {" "}
@@ -146,12 +146,12 @@ const Sobremi = () => {
                       </svg>
                     </span>
                   </p>
-                  <p className="text-gray-500 text-md md:text-md">
+                  <p className="text-sm text-gray-400 md:text-base">
                     2023 - Udemy
                   </p>
                 </div>
                 <div className="mt-3 transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
-                  <p className="flex items-center text-xl text-gray-50">
+                  <p className="flex items-center text-lg text-gray-50 md:text-xl">
                     Curso de React{" "}
                     <span className="ml-2">
                       <svg
@@ -167,12 +167,12 @@ const Sobremi = () => {
                       </svg>
                     </span>
                   </p>
-                  <p className="text-gray-500 text-md md:text-md">
+                  <p className="text-sm text-gray-400 md:text-base">
                     2023 - Udemy
                   </p>
                 </div>
                 <div className="mt-3 transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
-                  <p className="flex items-center text-md text-gray-50">
+                  <p className="flex items-center text-lg text-gray-50 md:text-xl">
                     Curso de Node js
                     <span className="ml-2">
                       <svg
@@ -188,7 +188,7 @@ const Sobremi = () => {
                       </svg>
                     </span>
                   </p>
-                  <p className="text-gray-500 text-md md:text-md">
+                  <p className="text-sm text-gray-400 md:text-base">
                     2023 - Udemy
                   </p>
                 </div>
@@ -208,112 +208,87 @@ const Sobremi = () => {
           className="w-full mt-10 md:mt-10 lg:px-20 xl:px-40"
         >
           <div className="w-full xl:px-20">
-            <h3 className="text-xl font-semibold text-center text-green-500 md:text-left md:text-xl">
+            <h3 className="text-2xl font-semibold text-center text-green-500 md:text-left md:text-3xl">
               Experiencia Laboral
             </h3>
-            <div className="grid gap-1 mt-4 transition-all duration-500 ease-in-out rounded-lg md:gap-0 w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
-              <p className="flex text-gray-400 align-top text-md md:text-md md:text-gray-200 w-max">
-                2025 - Actualmente
-              </p>
-              <div>
-                <h4 className="text-xl md:text-xl text-gray-50">
-                  Desarrollador Software
-                </h4>
-                <p className="mt-1 text-gray-400 text-md md:text-md">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Beatae impedit veritatis, nobis officia deleniti blanditiis
-                  culpa cum error molestiae aliquam accusamus aut a odio
-                  pariatur in sequi cupiditate. Perspiciatis, error.
+            <div className="mt-6 space-y-10">
+              <div className="grid items-start gap-6 transition-all duration-500 rounded-lg md:grid-cols-[auto,1fr] md:gap-8 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
+                <p className="text-sm font-medium text-gray-400 md:text-base md:text-gray-200">
+                  2025 - Actualmente
                 </p>
                 <div>
-                  <div className="flex flex-wrap gap-1 mt-3 md:gap-2">
-                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
-                      HTML
-                    </p>
-                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
-                      CSS
-                    </p>
-                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
-                      Javascript
-                    </p>
-                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
-                      PHP
-                    </p>
-                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
-                      MySQL
-                    </p>
+                  <h4 className="text-xl text-gray-50 md:text-2xl">
+                    Desarrollador Software
+                  </h4>
+                  <p className="mt-3 text-sm leading-relaxed text-gray-300 md:text-base">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Beatae impedit veritatis, nobis officia deleniti blanditiis
+                    culpa cum error molestiae aliquam accusamus aut a odio
+                    pariatur en sequi cupiditate. Perspiciatis, error.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {["HTML", "CSS", "Javascript", "PHP", "MySQL"].map((skill) => (
+                      <p
+                        key={skill}
+                        className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-sm md:rounded-2xl"
+                      >
+                        {skill}
+                      </p>
+                    ))}
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="grid gap-1 mt-10 transition-all duration-500 ease-in-out rounded-lg md:gap-0 w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
-              <p className="flex text-gray-400 align-top text-md md:text-md md:text-gray-200 w-max">
-                2023 - 2025
-              </p>
-              <div>
-                <h4 className="text-xl md:text-xl text-gray-50">
-                  Desarrollador de Diagnosis
-                </h4>
-                <p className="mt-1 text-gray-400 text-md md:text-md">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Beatae impedit veritatis, nobis officia deleniti blanditiis
-                  culpa cum error molestiae aliquam accusamus aut a odio
-                  pariatur in sequi cupiditate. Perspiciatis, error.
+              <div className="grid items-start gap-6 transition-all duration-500 rounded-lg md:grid-cols-[auto,1fr] md:gap-8 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
+                <p className="text-sm font-medium text-gray-400 md:text-base md:text-gray-200">
+                  2023 - 2025
                 </p>
                 <div>
-                  <div className="flex flex-wrap gap-1 mt-3 md:gap-2">
-                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
-                      C++
-                    </p>
-                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
-                      Protocolos comunicación Vehiculos
-                    </p>
-                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
-                      Análisis de tramas
-                    </p>
-                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
-                      Testing
-                    </p>
-                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
-                      Plastic SCM
-                    </p>
+                  <h4 className="text-xl text-gray-50 md:text-2xl">
+                    Desarrollador de Diagnosis
+                  </h4>
+                  <p className="mt-3 text-sm leading-relaxed text-gray-300 md:text-base">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Beatae impedit veritatis, nobis officia deleniti blanditiis
+                    culpa cum error molestiae aliquam accusamus aut a odio
+                    pariatur en sequi cupiditate. Perspiciatis, error.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {["C++", "Protocolos comunicación Vehiculos", "Análisis de tramas", "Testing", "Plastic SCM"].map((skill) => (
+                      <p
+                        key={skill}
+                        className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-sm md:rounded-2xl"
+                      >
+                        {skill}
+                      </p>
+                    ))}
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="grid gap-1 mt-10 transition-all duration-500 ease-in-out rounded-lg md:gap-0 w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
-              <p className="flex text-gray-400 align-top text-md md:text-md md:text-gray-200 w-max">
-                2022 - 2023
-              </p>
-              <div>
-                <h4 className="text-xl md:text-xl text-gray-50">
-                  Desarrollador Fullstack (Practicas)
-                </h4>
-                <p className="mt-1 text-gray-400 text-md md:text-md">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Beatae impedit veritatis, nobis officia deleniti blanditiis
-                  culpa cum error molestiae aliquam accusamus aut a odio
-                  pariatur in sequi cupiditate. Perspiciatis, error.
+              <div className="grid items-start gap-6 transition-all duration-500 rounded-lg md:grid-cols-[auto,1fr] md:gap-8 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
+                <p className="text-sm font-medium text-gray-400 md:text-base md:text-gray-200">
+                  2022 - 2023
                 </p>
                 <div>
-                  <div className="flex flex-wrap gap-1 mt-3 md:gap-2">
-                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
-                      HTML
-                    </p>
-                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
-                      CSS
-                    </p>
-                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
-                      Javascript
-                    </p>
-                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
-                      React
-                    </p>
-                    <p className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-md md:rounded-2xl">
-                      Node
-                    </p>
+                  <h4 className="text-xl text-gray-50 md:text-2xl">
+                    Desarrollador Fullstack (Prácticas)
+                  </h4>
+                  <p className="mt-3 text-sm leading-relaxed text-gray-300 md:text-base">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Beatae impedit veritatis, nobis officia deleniti blanditiis
+                    culpa cum error molestiae aliquam accusamus aut a odio
+                    pariatur en sequi cupiditate. Perspiciatis, error.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {["HTML", "CSS", "Javascript", "React", "Node"].map((skill) => (
+                      <p
+                        key={skill}
+                        className="flex items-center justify-center px-2 py-1 text-xs font-semibold text-green-300 border border-gray-700 rounded-xl md:px-3 md:py-1 md:text-sm md:rounded-2xl"
+                      >
+                        {skill}
+                      </p>
+                    ))}
                   </div>
                 </div>
               </div>

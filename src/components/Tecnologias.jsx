@@ -9,13 +9,13 @@ const Tecnologias = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-between w-full gap-4 mt-10 md:mt-20 xl:flex-row md:px-20">
+    <div className="flex flex-col items-center justify-between w-full gap-6 mt-12 md:mt-20 xl:flex-row md:px-20">
       <h3 className="flex text-left xl:flex-col md:gap-2 whitespace-nowrap">
-        <span className="text-xl text-gray-200 md:text-gray-400 md:text-3xl">
+        <span className="text-lg text-gray-300 md:text-gray-400 md:text-3xl">
           Teconologías con las que trabajo
         </span>
         <div className="hidden md:block">
-          <span className="text-xl xl:text-left md:text-3xl text-gray-50">
+          <span className="text-xl font-semibold text-gray-50 xl:text-left md:text-3xl">
             {tech}
           </span>
         </div>
