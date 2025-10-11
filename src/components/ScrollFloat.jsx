@@ -44,7 +44,7 @@ const ScrollFloat = ({ text = "" }) => {
   }, []);
 
   return (
-    <h2 ref={containerRef} className="overflow-hidden text-3xl font-bold text-white lg:text-5xl">
+    <h2 ref={containerRef} className="overflow-hidden text-3xl font-semibold text-white md:text-4xl lg:text-5xl">
       <span className="inline-block">{splitText}</span>
     </h2>
   );

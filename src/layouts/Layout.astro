@@ -23,9 +23,9 @@ const { title } = Astro.props;
   <body class="font-sans bg-black-900">
     <Header client:load />
     <main class="relative min-h-screen" id="inicio">
-      <div class="relative mt-16">
+      <div class="relative mt-14 md:mt-16">
         <div
-          class="container relative px-6 py-8 pt-8 pb-10 mx-auto md:py-24 lg:px-16 xl:px-20 md:pt-16"
+          class="container relative px-6 py-12 mx-auto md:py-20 lg:px-16 xl:px-20"
         >
           <div class="relative">
             <div class="mx-auto">
@@ -47,7 +47,7 @@ const { title } = Astro.props;
                   </div>
                   <div class="flex flex-col items-center">
                     <h1
-                      class="text-3xl text-center text-white sm:text-3xl md:text-6xl xl:text-7xl font-600"
+                      class="text-4xl font-semibold text-center text-white sm:text-5xl md:text-6xl xl:text-7xl"
                     >
                       <span class="block text-foreground">
                         Jose Javier Moreno
@@ -79,7 +79,7 @@ const { title } = Astro.props;
                         </div>
                       </span>
                     </h1>
-                    <p class="pt-2 my-3 text-gray-200 text-md lg:text-xl">
+                    <p class="pt-4 my-4 text-base leading-relaxed text-gray-200 sm:text-lg lg:text-xl">
                       Hola, soy Jose Javier. Desarrollador de software fullstack
                       con 2 años de experiencia. Me encanta crear soluciones
                       atractivas e innovadoras. Así como aplicaciones que ayuden
@@ -88,13 +88,13 @@ const { title } = Astro.props;
                   </div>
                   <div class="flex items-center justify-center gap-4 mt-10">
                     <a
-                      class="relative flex inline-flex justify-center px-4 py-2 space-x-2 text-center text-white transition-all duration-200 ease-out border rounded-md outline-none text-md md:px-4 md:py-2 md:text-md font-regular bg-verde-btn-700 border-verde-btn-600 hover:bg-verde-btn-500 focus-visile:outline-4 focus:visible:outline-offset-1 focus-visible:ouline-green-600"
+                      class="relative flex inline-flex justify-center px-5 py-2 space-x-2 text-center text-white transition-all duration-200 ease-out border rounded-md outline-none text-sm md:px-5 md:py-3 md:text-base font-medium bg-verde-btn-700 border-verde-btn-600 hover:bg-verde-btn-500 focus-visile:outline-4 focus:visible:outline-offset-1 focus-visible:ouline-green-600"
                       href="/images/CV - Jose Javier Moreno Clavijos.pdf"
                       class="btn btn-primary"
                       download>Descargar CV</a
                     >
                     <a
-                      class="relative flex inline-flex justify-center px-4 py-2 space-x-2 text-center text-white transition-all duration-200 ease-out border border-green-100 rounded-md outline-none text-md md:text-md md:px-4 font-regular bg-verde-btn-400 focus-visile:outline-4 focus:visible:outline-offset-1 focus-visible:ouline-green-600"
+                      class="relative flex inline-flex justify-center px-5 py-2 space-x-2 text-center text-white transition-all duration-200 ease-out border border-green-100 rounded-md outline-none text-sm md:text-base md:px-5 font-medium bg-verde-btn-400 focus-visile:outline-4 focus:visible:outline-offset-1 focus-visible:ouline-green-600"
                       href="#">Contactar</a
                     >
                   </div>
@@ -103,33 +103,33 @@ const { title } = Astro.props;
             </div>
           </div>
           <div class="overflow-hidden">
-            <div class="max-w-2xl mx-auto mt-20 fade-mask">
+            <div class="max-w-2xl mx-auto mt-16 md:mt-20 fade-mask">
               <div
                 class="flex space-x-8 text-white animate-marquee2 whitespace-nowrap lg:px-8"
               >
-                <span class="text-md md:text-xl">🔍 Detallista</span>
-                <span class="text-md md:text-xl">💡 Creativo</span>
-                <span class="text-md md:text-xl">⚡ Proactivo</span>
-                <span class="text-md md:text-xl">🛠️ Resolutivo</span>
-                <span class="text-md md:text-xl">🧠 Autodidacta</span>
-                <span class="text-md md:text-xl">🔍 Detallista</span>
-                <span class="text-md md:text-xl">💡 Creativo</span>
-                <span class="text-md md:text-xl">⚡ Proactivo</span>
-                <span class="text-md md:text-xl">🛠️ Resolutivo</span>
-                <span class="text-md md:text-xl">🧠 Autodidacta</span>
+                <span class="text-sm sm:text-base md:text-lg">🔍 Detallista</span>
+                <span class="text-sm sm:text-base md:text-lg">💡 Creativo</span>
+                <span class="text-sm sm:text-base md:text-lg">⚡ Proactivo</span>
+                <span class="text-sm sm:text-base md:text-lg">🛠️ Resolutivo</span>
+                <span class="text-sm sm:text-base md:text-lg">🧠 Autodidacta</span>
+                <span class="text-sm sm:text-base md:text-lg">🔍 Detallista</span>
+                <span class="text-sm sm:text-base md:text-lg">💡 Creativo</span>
+                <span class="text-sm sm:text-base md:text-lg">⚡ Proactivo</span>
+                <span class="text-sm sm:text-base md:text-lg">🛠️ Resolutivo</span>
+                <span class="text-sm sm:text-base md:text-lg">🧠 Autodidacta</span>
               </div>
             </div>
           </div>
         </div>
 
         <div
-          class="container relative py-6 pt-8 pb-10 mx-auto px-7 md:py-16 md:px-14 lg:py-16 lg:px-16 xl:px-20 md:pt-16"
+          class="container relative px-7 py-12 mx-auto md:py-20 md:px-14 lg:px-16 xl:px-20"
         >
           <Sobremi client:load />
         </div>
 
         <div
-          class="container relative py-6 pt-8 pb-10 mx-auto px-7 md:py-16 md:px-14 lg:py-24 lg:px-20 xl:px-20 md:pt-16"
+          class="container relative px-7 py-12 mx-auto md:py-20 md:px-14 lg:py-24 lg:px-20 xl:px-20"
         >
           <section class="relative flex flex-col items-center" id="proyectos">
 
@@ -152,15 +152,13 @@ const { title } = Astro.props;
 
               <!-- Contenido -->
               <div
-                class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 py-8
-      text-gray-200 bg-black-800/80 backdrop-blur-sm z-10
-      lg:static lg:bg-transparent lg:backdrop-blur-none lg:items-end lg:justify-center lg:w-[60%] lg:ml-[40%] lg:pl-8 lg:py-8 lg:text-right lg:rounded-lg"
+                class="absolute inset-0 flex flex-col items-center justify-center px-4 py-8 text-center text-gray-200 bg-black-800/80 backdrop-blur-sm z-10 lg:static lg:bg-transparent lg:backdrop-blur-none lg:items-end lg:justify-center lg:w-[60%] lg:ml-[40%] lg:pl-8 lg:py-8 lg:text-right lg:rounded-lg"
               >
-                <p class="text-sm text-green-400">Proyecto Destacado</p>
-                <h3 class="mt-1 text-2xl font-semibold text-white">
+                <p class="text-sm font-medium text-green-400 sm:text-base">Proyecto Destacado</p>
+                <h3 class="mt-2 text-2xl font-semibold text-white md:text-3xl">
                   Halcyon Theme
                 </h3>
-                <p class="max-w-xs mt-3 text-sm leading-snug lg:max-w-md">
+                <p class="max-w-xs mt-4 text-sm leading-relaxed sm:text-base lg:max-w-md">
                   A minimal, dark blue theme for VS Code, Sublime Text, Atom,
                   iTerm, and more. Available on
                   <span class="text-teal-400 underline"
@@ -173,7 +171,7 @@ const { title } = Astro.props;
                   <span class="text-teal-400 underline">npm</span>.
                 </p>
                 <ul
-                  class="flex flex-wrap justify-center gap-2 mt-4 text-xs text-gray-300 lg:justify-end"
+                  class="flex flex-wrap justify-center gap-2 mt-5 text-xs text-gray-300 sm:text-sm lg:justify-end"
                 >
                   <li>VS Code</li>
                   <li>Sublime Text</li>
@@ -182,7 +180,7 @@ const { title } = Astro.props;
                   <li>Hyper</li>
                 </ul>
                 <ul
-                  class="flex justify-center gap-4 mt-3 text-teal-400 lg:justify-end"
+                  class="flex justify-center gap-4 mt-4 text-teal-400 lg:justify-end"
                 >
                   <li>
                     <a href="#" class="transition hover:text-white">🔗</a>
@@ -199,13 +197,13 @@ const { title } = Astro.props;
         </div>
       </div>
       <div
-        class="container relative px-6 py-16 pt-8 pb-10 mx-auto md:py-24 lg:px-16 xl:px-10 md:pt-0"
+        class="container relative px-6 py-16 mx-auto md:py-24 lg:px-16 xl:px-10"
       >
         <section class="relative flex flex-col items-center" id="contacto">
-          <h2 class="text-xl font-bold text-center text-white lg:text-3xl">
+          <h2 class="text-3xl font-semibold text-center text-white md:text-4xl">
             Contacto
           </h2>
-          <p class="max-w-3xl mt-2 text-center text-gray-400">
+          <p class="max-w-3xl mt-4 text-base leading-relaxed text-center text-gray-400 sm:text-lg">
             Si necesitas una web, tienes algún proyecto en mente que quieres
             lleva a cabo, o simplemente quieres hablar sobre temas tech, no
             dudes en contactar conmigo!
@@ -214,7 +212,7 @@ const { title } = Astro.props;
           <div class="mt-10">
             <div class="grid gap-6 md:grid-cols-2">
               <div class="flex flex-col gap-2">
-                <h3 class="text-lg text-center text-green-400">
+                <h3 class="text-lg font-medium text-center text-green-400 md:text-xl">
                   Información de contacto
                 </h3>
                 <div
@@ -238,8 +236,8 @@ const { title } = Astro.props;
                   </div>
 
                   <div>
-                    <p class="text-sm text-gray-500">Email</p>
-                    <p class="text-md text-gray-50">
+                    <p class="text-sm font-medium text-gray-500">Email</p>
+                    <p class="text-base text-gray-50">
                       josejavier.moreno.frz@gmail.com
                     </p>
                   </div>
@@ -268,8 +266,8 @@ const { title } = Astro.props;
                     </div>
 
                     <div>
-                      <p class="text-sm text-gray-500">Teléfono</p>
-                      <p class="text-md text-gray-50">662092982</p>
+                      <p class="text-sm font-medium text-gray-500">Teléfono</p>
+                      <p class="text-base text-gray-50">662092982</p>
                     </div>
                   </div>
                 </div>
@@ -302,20 +300,20 @@ const { title } = Astro.props;
                     </div>
 
                     <div>
-                      <p class="text-sm text-gray-500">Ubicación</p>
-                      <p class="text-sm text-gray-50">Albacete</p>
+                      <p class="text-sm font-medium text-gray-500">Ubicación</p>
+                      <p class="text-base text-gray-50">Albacete</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="w-full p-4 rounded-md bg-black-700">
+              <div class="w-full p-6 rounded-md bg-black-700">
                 <form>
-                  <h3 class="mb-4 text-green-400 md:text-lg">
+                  <h3 class="mb-6 text-xl font-semibold text-green-400 md:text-2xl">
                     Envíame un mensaje
                   </h3>
                   <fieldset class="grid w-full grid-cols-2 gap-4">
                     <div class="flex flex-col col-span-1">
-                      <label for="name" class="text-gray-400">Nombre</label>
+                      <label for="name" class="text-sm font-medium text-gray-400">Nombre</label>
                       <input
                         type="text"
                         id="name"
@@ -323,7 +321,7 @@ const { title } = Astro.props;
                       />
                     </div>
                     <div class="flex flex-col col-span-1">
-                      <label for="email" class="text-gray-400">Email</label>
+                      <label for="email" class="text-sm font-medium text-gray-400">Email</label>
                       <input
                         type="email"
                         id="email"
@@ -331,7 +329,7 @@ const { title } = Astro.props;
                       />
                     </div>
                     <div class="flex flex-col col-span-2">
-                      <label for="subject" class="text-gray-400">Asunto</label>
+                      <label for="subject" class="text-sm font-medium text-gray-400">Asunto</label>
                       <input
                         type="text"
                         id="subject"
@@ -339,7 +337,7 @@ const { title } = Astro.props;
                       />
                     </div>
                     <div class="flex flex-col col-span-2">
-                      <label for="message" class="text-gray-400">Mensaje</label>
+                      <label for="message" class="text-sm font-medium text-gray-400">Mensaje</label>
                       <textarea
                         id="message"
                         class="px-3 py-2 mt-1 bg-gray-200 border-gray-600 border-solid rounded-md border-1 focus:outline-offset-0 focus:outline-green-600"
@@ -348,7 +346,7 @@ const { title } = Astro.props;
                   </fieldset>
                   <button
                     type="submit"
-                    class="w-full mt-4 text-center transition-all duration-200 ease-in rounded-md cursor-pointer hover:bg-verde-btn-500 md:px-4 md:py-2 md:text-sm border-verde-btn-600 bg-verde-btn-700 text-gray-50"
+                    class="w-full px-4 py-3 mt-6 text-sm font-medium text-center transition-all duration-200 ease-in rounded-md cursor-pointer md:text-base hover:bg-verde-btn-500 border-verde-btn-600 bg-verde-btn-700 text-gray-50"
                     >Enviar</button
                   >
                 </form>

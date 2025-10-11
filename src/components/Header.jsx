@@ -61,7 +61,7 @@ const Header = () => {
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase().replace(" ", "-")}`}
-                    className="font-medium transition-colors text-md hover:text-green-400"
+                    className="text-sm font-medium transition-colors hover:text-green-400 md:text-base"
                     onClick={() => setIsOpen(false)} // cierra menú en móviles
                   >
                     {item}
