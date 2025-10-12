@@ -13,7 +13,8 @@ export const projects: Project[] = [
       "Plataforma SaaS para monitorizar métricas financieras en tiempo real y generar reportes colaborativos para el equipo.",
     liveUrl: "https://adventurewebjj.netlify.app/",
     tags: ["Astro", "TypeScript", "Tailwind CSS"],
-    windowClasses: "",
+    windowClasses:
+      "-rotate-[7deg] group-hover:-translate-y-3 group-hover:rotate-0 group-focus-within:-translate-y-3 group-focus-within:rotate-0",
   },
   {
     title: "Savia Naturals",
@@ -21,7 +22,8 @@ export const projects: Project[] = [
       "Ecommerce sostenible diseñado para maximizar la conversión con un diseño editorial y storytelling de marca.",
     liveUrl: "https://fisio-web.netlify.app/",
     tags: ["Next.js", "Contentful", "Stripe"],
-    windowClasses: "",
+    windowClasses:
+      "group-hover:-translate-y-3 group-focus-within:-translate-y-3",
   },
   {
     title: "Loop Studio",
@@ -29,6 +31,7 @@ export const projects: Project[] = [
       "Landing page para agencia digital con foco en storytelling visual, animaciones suaves y captación de leads.",
     liveUrl: "https://web-barberia-clasica.netlify.app/",
     tags: ["Astro", "GSAP", "Framer Motion"],
-    windowClasses: "",
+    windowClasses:
+      "rotate-[7deg] group-hover:-translate-y-3 group-hover:rotate-0 group-focus-within:-translate-y-3 group-focus-within:rotate-0",
   },
 ];

@@ -9,7 +9,7 @@ const { title, liveUrl, windowClasses = "" } = Astro.props;
 ---
 
 <article
-  class={`relative mx-auto flex w-full max-w-sm flex-col overflow-hidden rounded-2xl border border-white/12 bg-black-800/80 shadow-[0_24px_60px_rgba(8,15,26,0.45)] backdrop-blur-xl transition duration-500 hover:-translate-y-1 hover:scale-[1.02] ${windowClasses}`}
+  class={`relative mx-auto flex w-full max-w-[18rem] flex-col overflow-hidden rounded-2xl border border-white/12 bg-black-800/80 shadow-[0_24px_60px_rgba(8,15,26,0.45)] backdrop-blur-xl transition duration-500 hover:-translate-y-1 hover:scale-[1.02] ${windowClasses}`}
 >
   <div class="flex items-center justify-between w-full px-5 py-3 border-b border-white/10 bg-black-900/80">
     <div class="flex items-center gap-1.5">
@@ -21,7 +21,7 @@ const { title, liveUrl, windowClasses = "" } = Astro.props;
     <span class="hidden text-[10px] uppercase tracking-[0.35em] text-gray-500 sm:block">preview</span>
   </div>
 
-  <div class="relative flex-1 min-h-[180px] bg-black-900">
+  <div class="relative flex-1 min-h-[160px] bg-black-900">
     {liveUrl ? (
       <iframe
         src={liveUrl}

@@ -9,7 +9,14 @@ import Tecnologias from "../components/Tecnologias.jsx";
 import LiquidEther from "../components/LiquidEther.jsx";
 import { projects } from "../lib/projects";
 import ProjectWindow from "../components/ProjectWindow.astro";
+
 const { title } = Astro.props;
+const stackPositions = [
+  "-translate-x-[78%] sm:-translate-x-[66%] lg:-translate-x-[58%]",
+  "-translate-x-1/2",
+  "-translate-x-[22%] sm:-translate-x-[34%] lg:-translate-x-[42%]",
+];
+const stackDepths = ["z-30", "z-50", "z-40"];
 ---
 
 <!doctype html>
@@ -181,34 +188,43 @@ const { title } = Astro.props;
           <ScrollFloat client:load text="Proyectos" />
 
           <div class="w-full mt-12">
-            <div class="flex flex-wrap justify-center gap-12">
-              {
-                projects.map((project, index) => (
-                  <div
-                    class="group flex w-full max-w-sm flex-col items-center gap-4 text-center"
-                  >
-                    <ProjectWindow
-                      title={project.title}
-                      liveUrl={project.liveUrl}
-                      windowClasses={project.windowClasses}
-                    />
-                    <div
-                      class="w-full rounded-2xl border border-white/10 bg-black-800/70 p-5 text-sm leading-relaxed text-gray-300 opacity-0 translate-y-2 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100"
-                    >
-                      <p>{project.description}</p>
-                      <ul class="flex flex-wrap justify-center gap-2 mt-3">
-                        {project.tags.map((tag) => (
-                          <li
-                            class="px-3 py-1 text-xs font-medium uppercase tracking-wider text-green-200 rounded-full border border-green-400/30 bg-green-400/10"
+            <div class="relative flex flex-col items-center">
+              <div class="relative w-full max-w-5xl">
+                <div class="relative mx-auto h-[340px] w-full sm:h-[360px] md:h-[400px]">
+                  {
+                    projects.map((project, index) => {
+                      const stackClass = stackPositions[index] ?? "-translate-x-1/2";
+                      const depthClass = stackDepths[index] ?? "z-40";
+                      return (
+                        <div
+                          class={`project-card group absolute left-1/2 top-1/2 flex w-[16.5rem] -translate-y-1/2 flex-col items-center transition-all duration-500 sm:w-[18rem] ${stackClass} ${depthClass} hover:z-[60] focus-within:z-[60]`}
+                          tabindex="0"
+                        >
+                          <ProjectWindow
+                            title={project.title}
+                            liveUrl={project.liveUrl}
+                            windowClasses={project.windowClasses}
+                          />
+                          <div
+                            class="pointer-events-none mt-5 w-full translate-y-3 rounded-2xl border border-white/10 bg-black-900/80 p-5 text-left text-sm leading-relaxed text-gray-300 opacity-0 shadow-[0_20px_45px_rgba(8,15,26,0.45)] backdrop-blur-xl transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100"
                           >
-                            {tag}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                ))
-              }
+                            <p>{project.description}</p>
+                            <ul class="mt-3 flex flex-wrap gap-2 text-[11px] uppercase tracking-wide text-green-200">
+                              {project.tags.map((tag) => (
+                                <li
+                                  class="rounded-full border border-green-400/30 bg-green-400/10 px-3 py-1 font-medium"
+                                >
+                                  {tag}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      );
+                    })
+                  }
+                </div>
+              </div>
             </div>
           </div>
         </section>
