@@ -32,7 +32,13 @@ const ChatBot = () => {
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify({ message: userMessage })
+          body: JSON.stringify([
+            {
+              sessionId: "",
+              action: "sendMessage",
+              chatInput: userMessage
+            }
+          ])
         }
       );
 
