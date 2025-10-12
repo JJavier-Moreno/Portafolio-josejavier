@@ -38,9 +38,9 @@ const ChatBot = () => {
           aria-label="Abrir chat IA"
         >
           <img
-            src="/images/robot-peek.png"
+            src="/images/robot-ini.png"
             alt="Robot saludando para abrir el chat"
-            className="h-[300px] w-[200px] drop-shadow-[0_12px_18px_rgba(0,0,0,0.35)]"
+            className="w-32 drop-shadow-[0_12px_18px_rgba(0,0,0,0.35)]"
           />
         </button>
       )}
