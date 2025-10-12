@@ -8,24 +8,69 @@ const ChatBot = () => {
   ]);
   const [input, setInput] = useState("");
   const bottomRef = useRef(null);
+  const [loading, setLoading] = useState(false);
 
   // Auto-scroll
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, open]);
 
-  // Fake respuesta IA para demo (reemplaza con tu API si quieres)
-  const handleSend = (e) => {
+  const handleSend = async (e) => {
     e.preventDefault();
-    if (!input.trim()) return;
-    setMessages([...messages, { role: "user", text: input }]);
+    if (!input.trim() || loading) return;
+
+    const userMessage = input.trim();
+    setMessages(prev => [...prev, { role: "user", text: userMessage }]);
     setInput("");
-    setTimeout(() => {
-      setMessages(msgs => [
-        ...msgs,
-        { role: "ai", text: "🤖 (Demo) ¡Recibido! Pronto podré responderte con IA real." }
+    setLoading(true);
+
+    try {
+      const response = await fetch(
+        "https://n8n.srv973995.hstgr.cloud/webhook/e70711cf-2779-48cc-bc62-a673212b61c8/chat",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ message: userMessage })
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Error ${response.status}`);
+      }
+
+      const contentType = response.headers.get("content-type") || "";
+      let aiText;
+
+      if (contentType.includes("application/json")) {
+        const data = await response.json();
+        aiText =
+          data?.reply ||
+          data?.message ||
+          data?.text ||
+          (typeof data === "string" ? data : JSON.stringify(data));
+      } else {
+        aiText = await response.text();
+      }
+
+      setMessages(prev => [
+        ...prev,
+        { role: "ai", text: aiText || "🤖 La IA no devolvió contenido." }
       ]);
-    }, 700);
+    } catch (error) {
+      console.error("Error al enviar el mensaje al chatbot:", error);
+      setMessages(prev => [
+        ...prev,
+        {
+          role: "ai",
+          text:
+            "⚠️ Ocurrió un problema al conectar con el chatbot. Por favor, inténtalo de nuevo más tarde."
+        }
+      ]);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -80,6 +125,13 @@ const ChatBot = () => {
                     </div>
                   </div>
                 ))}
+                {loading && (
+                  <div className="flex justify-start">
+                    <div className="max-w-[80%] rounded-bl-sm rounded-2xl bg-green-100 px-4 py-2 text-sm text-black">
+                      El asistente está escribiendo...
+                    </div>
+                  </div>
+                )}
                 <div ref={bottomRef} />
               </div>
               {/* Input */}
