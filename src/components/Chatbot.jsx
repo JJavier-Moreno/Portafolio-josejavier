@@ -34,7 +34,7 @@ const ChatBot = () => {
           },
           body: JSON.stringify([
             {
-              sessionId: "",
+              sessionId: "1",
               action: "sendMessage",
               chatInput: userMessage
             }
