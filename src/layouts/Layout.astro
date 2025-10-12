@@ -181,21 +181,6 @@ const { title } = Astro.props;
         <section class="relative flex flex-col items-center" id="proyectos">
           <ScrollFloat client:load text="Proyectos" />
 
-          <div class="grid w-full gap-12 mt-20 lg:items-center">
-            <div
-              class="relative flex flex-col gap-6 md:min-h-[200px] lg:min-h-[300px]"
-            >
-              {
-                projects.map((project, index) => (
-                  <ProjectWindow
-                    title={project.title}
-                    liveUrl={project.liveUrl}
-                    windowClasses={`${zIndices[index] ?? "md:z-20"} ${project.windowClasses}`}
-                  />
-                ))
-              }
-            </div>
-          </div>
         </section>
       </div>
       <Tecnologias client:load />
@@ -315,89 +300,7 @@ const { title } = Astro.props;
                   </div>
                 </div>
 
-              </div>
-            </div>
-            <div class="w-full p-6 rounded-md">
-              <form
-                class="grid gap-5 p-6 transition-all duration-300 border rounded-xl shadow-lg bg-black-700/70 border-black-600/80 backdrop-blur"
-              >
-                <div class="grid gap-5 md:grid-cols-2">
-                  <div class="flex flex-col gap-2">
-                    <label
-                      for="contact-name"
-                      class="text-sm font-medium uppercase tracking-wide text-gray-400"
-                    >
-                      Nombre completo
-                    </label>
-                    <input
-                      id="contact-name"
-                      type="text"
-                      name="name"
-                      placeholder="Tu nombre"
-                      class="px-4 py-3 text-sm transition-colors border rounded-lg bg-black-800/60 border-black-600 text-gray-100 placeholder:text-gray-500 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/40"
-                      required
-                    />
-                  </div>
-                  <div class="flex flex-col gap-2">
-                    <label
-                      for="contact-email"
-                      class="text-sm font-medium uppercase tracking-wide text-gray-400"
-                    >
-                      Correo electrónico
-                    </label>
-                    <input
-                      id="contact-email"
-                      type="email"
-                      name="email"
-                      placeholder="tu@email.com"
-                      class="px-4 py-3 text-sm transition-colors border rounded-lg bg-black-800/60 border-black-600 text-gray-100 placeholder:text-gray-500 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/40"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div class="flex flex-col gap-2">
-                  <label
-                    for="contact-subject"
-                    class="text-sm font-medium uppercase tracking-wide text-gray-400"
-                  >
-                    Asunto
-                  </label>
-                  <input
-                    id="contact-subject"
-                    type="text"
-                    name="subject"
-                    placeholder="¿Sobre qué quieres hablar?"
-                    class="px-4 py-3 text-sm transition-colors border rounded-lg bg-black-800/60 border-black-600 text-gray-100 placeholder:text-gray-500 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/40"
-                  />
-                </div>
-
-                <div class="flex flex-col gap-2">
-                  <label
-                    for="contact-message"
-                    class="text-sm font-medium uppercase tracking-wide text-gray-400"
-                  >
-                    Mensaje
-                  </label>
-                  <textarea
-                    id="contact-message"
-                    name="message"
-                    rows="5"
-                    placeholder="Cuéntame más sobre tu proyecto, idea o duda"
-                    class="px-4 py-3 text-sm transition-colors border rounded-lg resize-none bg-black-800/60 border-black-600 text-gray-100 placeholder:text-gray-500 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/40"
-                    required
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  class="px-6 py-3 text-sm font-semibold tracking-wide text-center text-white transition-colors rounded-lg bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-500/30"
-                >
-                  Enviar mensaje
-                </button>
-              </form>
-
-              <div class="flex flex-col items-center gap-4 mt-8">
+                              <div class="flex flex-col items-center gap-4 mt-8">
                 <p class="text-sm font-medium tracking-wide text-gray-400 uppercase">
                   También puedes encontrarme en
                 </p>
@@ -409,7 +312,7 @@ const { title } = Astro.props;
                     class=""
                     aria-label="GitHub"
                   >
-                    <div class="p-3 transition rounded-full bg-gray-800 hover:bg-green-500">
+                    <div class="p-3 transition bg-gray-800 rounded-full hover:bg-green-500">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         x="0px"
@@ -430,7 +333,7 @@ const { title } = Astro.props;
                     class=""
                     aria-label="LinkedIn"
                   >
-                    <div class="p-3 transition rounded-full bg-gray-800 hover:bg-blue-500">
+                    <div class="p-3 transition bg-gray-800 rounded-full hover:bg-blue-500">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         x="0px"
@@ -451,7 +354,7 @@ const { title } = Astro.props;
                     class=""
                     aria-label="Instagram"
                   >
-                    <div class="p-3 transition rounded-full bg-gray-800 hover:bg-pink-500">
+                    <div class="p-3 transition bg-gray-800 rounded-full hover:bg-pink-500">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         x="0px"
@@ -467,6 +370,90 @@ const { title } = Astro.props;
                   </a>
                 </div>
               </div>
+
+              </div>
+            </div>
+            <div class="w-full p-6 rounded-md">
+              <form
+                class="grid gap-5 p-6 transition-all duration-300 border shadow-lg rounded-xl bg-black-700/70 border-black-600/80 backdrop-blur"
+              >
+                <div class="grid gap-5 md:grid-cols-2">
+                  <div class="flex flex-col gap-2">
+                    <label
+                      for="contact-name"
+                      class="text-sm font-medium tracking-wide text-gray-400 uppercase"
+                    >
+                      Nombre completo
+                    </label>
+                    <input
+                      id="contact-name"
+                      type="text"
+                      name="name"
+                      placeholder="Tu nombre"
+                      class="px-4 py-3 text-sm text-gray-100 transition-colors border rounded-lg bg-black-800/60 border-black-600 placeholder:text-gray-500 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/40"
+                      required
+                    />
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label
+                      for="contact-email"
+                      class="text-sm font-medium tracking-wide text-gray-400 uppercase"
+                    >
+                      Correo electrónico
+                    </label>
+                    <input
+                      id="contact-email"
+                      type="email"
+                      name="email"
+                      placeholder="tu@email.com"
+                      class="px-4 py-3 text-sm text-gray-100 transition-colors border rounded-lg bg-black-800/60 border-black-600 placeholder:text-gray-500 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/40"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                  <label
+                    for="contact-subject"
+                    class="text-sm font-medium tracking-wide text-gray-400 uppercase"
+                  >
+                    Asunto
+                  </label>
+                  <input
+                    id="contact-subject"
+                    type="text"
+                    name="subject"
+                    placeholder="¿Sobre qué quieres hablar?"
+                    class="px-4 py-3 text-sm text-gray-100 transition-colors border rounded-lg bg-black-800/60 border-black-600 placeholder:text-gray-500 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/40"
+                  />
+                </div>
+
+                <div class="flex flex-col gap-2">
+                  <label
+                    for="contact-message"
+                    class="text-sm font-medium tracking-wide text-gray-400 uppercase"
+                  >
+                    Mensaje
+                  </label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    rows="5"
+                    placeholder="Cuéntame más sobre tu proyecto, idea o duda"
+                    class="px-4 py-3 text-sm text-gray-100 transition-colors border rounded-lg resize-none bg-black-800/60 border-black-600 placeholder:text-gray-500 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/40"
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="px-6 py-3 text-sm font-semibold tracking-wide text-center text-white transition-colors bg-green-500 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-500/30"
+                >
+                  Enviar mensaje
+                </button>
+              </form>
+
+
             </div>
           </div>
         </div>
