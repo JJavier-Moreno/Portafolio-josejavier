@@ -9,11 +9,60 @@ const ChatBot = () => {
   const [input, setInput] = useState("");
   const bottomRef = useRef(null);
   const [loading, setLoading] = useState(false);
+  const [sessionId, setSessionId] = useState("");
 
   // Auto-scroll
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, open]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const storedSessionId = window.sessionStorage.getItem("jj-chatbot-session-id");
+    if (storedSessionId) {
+      setSessionId(storedSessionId);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (sessionId) {
+      window.sessionStorage.setItem("jj-chatbot-session-id", sessionId);
+    } else {
+      window.sessionStorage.removeItem("jj-chatbot-session-id");
+    }
+  }, [sessionId]);
+
+  const extractText = (value, visited = new WeakSet()) => {
+    if (!value) return "";
+    if (typeof value === "string") return value;
+    if (Array.isArray(value)) {
+      return value
+        .map(item => extractText(item, visited))
+        .filter(Boolean)
+        .join("\n\n");
+    }
+    if (typeof value === "object") {
+      if (visited.has(value)) {
+        return "";
+      }
+      visited.add(value);
+
+      const directText =
+        extractText(value.response, visited) ||
+        extractText(value.reply, visited) ||
+        extractText(value.message, visited) ||
+        extractText(value.text, visited) ||
+        extractText(value.answer, visited) ||
+        extractText(value.output, visited) ||
+        extractText(value.messages, visited) ||
+        extractText(value.data, visited);
+
+      return directText || JSON.stringify(value);
+    }
+
+    return String(value);
+  };
 
   const handleSend = async (e) => {
     e.preventDefault();
@@ -32,7 +81,13 @@ const ChatBot = () => {
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify({ message: userMessage })
+          body: JSON.stringify([
+            {
+              sessionId: sessionId || "",
+              action: "sendMessage",
+              chatInput: userMessage
+            }
+          ])
         }
       );
 
@@ -45,18 +100,40 @@ const ChatBot = () => {
 
       if (contentType.includes("application/json")) {
         const data = await response.json();
-        aiText =
-          data?.reply ||
-          data?.message ||
-          data?.text ||
-          (typeof data === "string" ? data : JSON.stringify(data));
+        const normalized = Array.isArray(data) ? data[0] : data;
+
+        if (normalized && typeof normalized === "object") {
+          const nextSessionIdRaw =
+            normalized.sessionId ?? normalized.data?.sessionId ?? "";
+          const nextSessionId =
+            typeof nextSessionIdRaw === "string"
+              ? nextSessionIdRaw
+              : nextSessionIdRaw != null
+                ? String(nextSessionIdRaw)
+                : "";
+
+          if (nextSessionId && nextSessionId !== sessionId) {
+            setSessionId(nextSessionId);
+          }
+
+          aiText = extractText(normalized);
+        }
+
+        if (!aiText) {
+          aiText = extractText(data);
+        }
       } else {
         aiText = await response.text();
       }
 
+      const formattedAiText = (aiText || "").toString().trim();
+
       setMessages(prev => [
         ...prev,
-        { role: "ai", text: aiText || "🤖 La IA no devolvió contenido." }
+        {
+          role: "ai",
+          text: formattedAiText || "🤖 La IA no devolvió contenido."
+        }
       ]);
     } catch (error) {
       console.error("Error al enviar el mensaje al chatbot:", error);
