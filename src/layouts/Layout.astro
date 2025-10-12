@@ -198,7 +198,7 @@ const { title } = Astro.props;
                         href={project.liveUrl}
                         target="_blank"
                         rel="noreferrer"
-                        class="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-green-300 transition bg-green-500/10 rounded-full border border-green-500/40 hover:bg-green-500/20 hover:text-green-200"
+                        class="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-green-300 transition border rounded-full bg-green-500/10 border-green-500/40 hover:bg-green-500/20 hover:text-green-200"
                       >
                         Ver proyecto
                         <svg
@@ -235,6 +235,7 @@ const { title } = Astro.props;
               {projects.map((project, index) => (
                 <ProjectWindow
                   title={project.title}
+                  liveUrl={project.liveUrl}
                   windowClasses={`${zIndices[index] ?? "md:z-20"} ${project.windowClasses}`}
                 />
               ))}
