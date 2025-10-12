@@ -33,14 +33,14 @@ const ChatBot = () => {
       {/* Botón flotante */}
       {!open && (
         <button
-          className="fixed bottom-6 right-6 z-50 transform transition-transform duration-200 hover:scale-105 focus:scale-105 focus:outline-none"
+          className="fixed z-50 transition-transform duration-200 transform bottom-6 right-6 hover:scale-105 focus:scale-105 focus:outline-none"
           onClick={() => setOpen(true)}
           aria-label="Abrir chat IA"
         >
           <img
-            src="/images/robot-wave.svg"
+            src="/images/robot-peek.png"
             alt="Robot saludando para abrir el chat"
-            className="h-24 w-24 drop-shadow-[0_12px_18px_rgba(0,0,0,0.35)]"
+            className="h-[300px] w-[200px] drop-shadow-[0_12px_18px_rgba(0,0,0,0.35)]"
           />
         </button>
       )}
@@ -50,20 +50,20 @@ const ChatBot = () => {
         <div className="fixed bottom-6 right-6 z-50 w-[350px] max-w-[95vw]">
           <div className="relative flex flex-col">
             <img
-              src="/images/robot-peek.svg"
+              src="/images/robot-wave.png"
               alt="Robot asomándose sobre el chat"
-              className="pointer-events-none absolute left-1/2 top-0 w-36 -translate-x-1/2 -translate-y-[60%] drop-shadow-[0_10px_16px_rgba(0,0,0,0.35)]"
+              className="pointer-events-none absolute left-1/2 top-11 w-36 -translate-x-1/2 -translate-y-[60%] drop-shadow-[0_10px_16px_rgba(0,0,0,0.35)]"
             />
-            <div className="mt-12 flex flex-col overflow-hidden rounded-2xl border border-green-500 bg-black-900 shadow-2xl">
+            <div className="flex flex-col mt-12 overflow-hidden border border-green-500 shadow-2xl rounded-2xl bg-black-900">
               {/* Header */}
-              <div className="flex items-center justify-between rounded-t-2xl bg-green-600/90 px-4 py-2">
+              <div className="flex items-center justify-between px-4 py-2 rounded-t-2xl bg-green-600/90">
                 <span className="font-semibold text-white">Asistente JJ</span>
                 <button onClick={() => setOpen(false)} aria-label="Cerrar chat" className="text-white hover:text-green-100">
                   <X size={22} />
                 </button>
               </div>
               {/* Chat */}
-              <div className="flex-1 space-y-2 overflow-y-auto bg-black-900 px-4 py-3">
+              <div className="flex-1 px-4 py-3 space-y-2 overflow-y-auto bg-black-900">
                 {messages.map((msg, i) => (
                   <div
                     key={i}
@@ -84,11 +84,11 @@ const ChatBot = () => {
               </div>
               {/* Input */}
               <form
-                className="flex items-center gap-2 rounded-b-2xl border-t border-green-500 bg-black-800 px-3 py-2"
+                className="flex items-center gap-2 px-3 py-2 border-t border-green-500 rounded-b-2xl bg-black-800"
                 onSubmit={handleSend}
               >
                 <input
-                  className="flex-1 bg-transparent px-2 py-2 text-white placeholder-gray-400 outline-none"
+                  className="flex-1 px-2 py-2 text-white placeholder-gray-400 bg-transparent outline-none"
                   placeholder="Escribe tu mensaje..."
                   value={input}
                   onChange={e => setInput(e.target.value)}
