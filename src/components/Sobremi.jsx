@@ -60,7 +60,7 @@ const Sobremi = () => {
           transition={transition}
           className="w-full mt-10 md:mt-10 lg:px-20 xl:px-40"
         >
-          <div className="w-full px-4 md:px-0 xl:px-20">
+          <div className="w-full px-4 md:px-0 xl:px-15">
             <h3 className="text-2xl font-semibold text-green-500 md:text-3xl">
               Mi historia
             </h3>
@@ -89,7 +89,7 @@ const Sobremi = () => {
           transition={transition}
           className="w-full mt-10 md:mt-10 lg:px-20 xl:px-40"
         >
-          <div className="w-full xl:px-20">
+          <div className="w-full lg:px-0 xl:px-0">
             <h3 className="text-2xl font-semibold text-center text-green-500 md:text-left md:text-3xl">
               Estudios Cursados
             </h3>
@@ -205,9 +205,9 @@ const Sobremi = () => {
           animate="visible"
           variants={variants}
           transition={transition}
-          className="w-full mt-10 md:mt-10 lg:px-20 xl:px-40"
+          className="w-full mt-10 md:mt-10 lg:px-10 xl:px-40"
         >
-          <div className="w-full xl:px-20">
+          <div className="w-full xl:px-15">
             <h3 className="text-2xl font-semibold text-center text-green-500 md:text-left md:text-3xl">
               Experiencia Laboral
             </h3>

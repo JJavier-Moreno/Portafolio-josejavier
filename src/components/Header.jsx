@@ -11,8 +11,8 @@ const Header = () => {
     <header className="sticky top-0 z-40 text-white">
       <div className="absolute inset-0 z-0 flex w-full h-full transition-opacity bg-background/90 dark:bg-background/95 backdrop-blur-sm"></div>
 
-      <nav className="relative z-10 flex items-center justify-between border-b border-border-default">
-        <div className="flex items-center justify-between w-full h-16 px-6 lg:container lg:px-16 xl:px-20">
+      <nav className="relative z-10 flex items-center justify-between w-full border-b border-border-default">
+        <div className="flex items-center justify-between w-full h-16 px-20 mx-auto lg:container lg:px-20 xl:px-40">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/" className="block text-2xl font-semibold">
