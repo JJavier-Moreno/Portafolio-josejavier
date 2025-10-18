@@ -158,26 +158,26 @@ const ChatBot = () => {
       {/* Botón flotante */}
       {!open && (
         <button
-          className="fixed z-50 transition-transform duration-200 transform bottom-6 right-6 hover:scale-105 focus:scale-105 focus:outline-none"
+          className="fixed z-50 transition-transform duration-200 transform bottom-3 right-3 md:bottom-6 md:right-6 hover:scale-105 focus:scale-105 focus:outline-none"
           onClick={() => setOpen(true)}
           aria-label="Abrir chat IA"
         >
           <img
             src="/images/robot-ini.png"
             alt="Robot saludando"
-            className="w-32 drop-shadow-[0_12px_18px_rgba(0,0,0,0.35)]"
+            className="w-24 md:w-32 drop-shadow-[0_12px_18px_rgba(0,0,0,0.35)]"
           />
         </button>
       )}
 
       {/* Ventana de chat */}
       {open && (
-        <div className="fixed bottom-6 right-6 z-50 w-[350px] max-w-[95vw]">
+        <div className="fixed bottom-6 right-6 z-50 w-[95vw] max-w-[80vw] md:w-[350px] md:max-w-[95vw]">
           <div className="relative flex flex-col">
             <img
               src="/images/robot-wave.png"
               alt="Robot asomándose sobre el chat"
-              className="pointer-events-none absolute left-1/2 top-11 w-36 -translate-x-1/2 -translate-y-[60%] drop-shadow-[0_10px_16px_rgba(0,0,0,0.35)]"
+              className="pointer-events-none absolute left-1/2 top-11 w-24 md:w-36 -translate-x-1/2 -translate-y-[60%] drop-shadow-[0_10px_16px_rgba(0,0,0,0.35)]"
             />
             <div className="flex flex-col mt-12 overflow-hidden border border-green-500 shadow-2xl rounded-2xl bg-black-900">
               {/* Header */}
@@ -193,7 +193,7 @@ const ChatBot = () => {
               </div>
 
               {/* Área del chat con altura fija y scroll */}
-              <div className="px-4 py-3 space-y-2 overflow-y-auto bg-black-900 h-[400px] scroll-smooth">
+              <div className="px-4 py-3 space-y-2 overflow-y-auto bg-black-900 h-[30vh] md:h-[400px] scroll-smooth">
                 {messages.map((msg, i) => (
                   <div
                     key={i}

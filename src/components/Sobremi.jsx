@@ -93,7 +93,7 @@ const Sobremi = () => {
             <h3 className="text-2xl font-semibold text-center text-green-500 md:text-left md:text-3xl">
               Estudios Cursados
             </h3>
-            <div className="grid mt-4 transition-all duration-500 ease-in-out rounded-lg w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 hover:scale-105 hover:bg-black-800">
+            <div className="grid p-3 mt-4 transition-all duration-500 ease-in-out rounded-lg w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 hover:scale-105 hover:bg-black-800">
               <div className="flex text-gray-400 align-top md:text-gray-200 w-max">
                 <p className="text-sm md:text-base">2023 - Actualmente</p>
               </div>
@@ -108,7 +108,7 @@ const Sobremi = () => {
                 </div>
               </div>
             </div>
-            <div className="grid mt-4 transition-all duration-500 ease-in-out rounded-lg w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
+            <div className="grid p-3 mt-4 transition-all duration-500 ease-in-out rounded-lg w- md:first-line:gap-2 md:grid-cols-2 md:mt-5 md:p-6 md:hover:scale-105 md:hover:bg-black-800">
               <div className="flex text-gray-400 align-top md:text-gray-200 w-max">
                 <p className="text-sm md:text-base">2018 - 2023</p>
               </div>
@@ -128,7 +128,7 @@ const Sobremi = () => {
                 Otros estudios
               </h5>
               <div className="grid mt-4 md:mt-4 md:gap-5 md:grid-cols-3">
-                <div className="flex flex-col transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
+                <div className="flex flex-col p-3 transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
                   <p className="flex items-center text-lg text-gray-50 md:text-xl">
                     Curso de Javascript{" "}
                     <span className="ml-2">
@@ -150,7 +150,7 @@ const Sobremi = () => {
                     2023 - Udemy
                   </p>
                 </div>
-                <div className="mt-3 transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
+                <div className="p-3 mt-3 transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
                   <p className="flex items-center text-lg text-gray-50 md:text-xl">
                     Curso de React{" "}
                     <span className="ml-2">
@@ -171,7 +171,7 @@ const Sobremi = () => {
                     2023 - Udemy
                   </p>
                 </div>
-                <div className="mt-3 transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
+                <div className="p-3 mt-3 transition-all duration-500 ease-in-out rounded-lg md:px-6 md:py-3 md:mt-3 md:hover:scale-105 md:hover:bg-black-800">
                   <p className="flex items-center text-lg text-gray-50 md:text-xl">
                     Curso de Node js
                     <span className="ml-2">
